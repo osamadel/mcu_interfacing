@@ -111,16 +111,16 @@ uint_8 MDIO_GetPinValue (uint_8 port, uint_8 bitNum) {
     // TODO
 	switch (port) {
 	case PORTA:
-		return MDIO_PINA;
+		return (MDIO_PINA>>bitNum)/2;
 		break;
 	case PORTB:
-		return MDIO_PINB;
+		return (MDIO_PINB>>bitNum)/2;
 		break;
 	case PORTC:
-		return MDIO_PINC;
+		return (MDIO_PINC>>bitNum)/2;
 		break;
 	case PORTD:
-		return MDIO_PIND;
+		return (MDIO_PIND>>bitNum)/2;
 		break;
 	default:
 		break;

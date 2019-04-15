@@ -1,0 +1,14 @@
+#include "libs/L_STD_TYPES.h"
+#include "HLED/HLED_interface.h"
+
+void initialize(void) {
+	return;
+} // end initialize
+
+void initializePins(uint8 pins *) {
+	return;
+} // end initializePins
+
+void display(uint8 number) {
+	return;
+} // end display

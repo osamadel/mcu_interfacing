@@ -1,0 +1,4 @@
+#ifndef H7SEGMENTS_PRIVATE_H
+#define H7SEGMENTS_PRIVATE_H
+	uint_8
+#endif

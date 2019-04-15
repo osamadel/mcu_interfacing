@@ -1,8 +1,12 @@
-13:10:30 **** Incremental Build of configuration Debug for project MDIO_app ****
+13:30:14 **** Incremental Build of configuration Debug for project MDIO_app ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:3:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
 Finished building: ../main.c
  
 Building target: MDIO_app.elf
@@ -24,10 +28,10 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    1700 bytes (5.2% Full)
+Program:    5058 bytes (15.4% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:          8 bytes (0.4% Full)
 (.data + .bss + .noinit)
 
 
@@ -48,21 +52,21 @@ avrdude: erasing chip
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: reading input file "MDIO_app.hex"
 avrdude: input file MDIO_app.hex auto detected as Intel Hex
-avrdude: writing flash (1700 bytes):
+avrdude: writing flash (5058 bytes):
 
-Writing | ################################################## | 100% 1.01s
+Writing | ################################################## | 100% 2.83s
 
-avrdude: 1700 bytes of flash written
+avrdude: 5058 bytes of flash written
 avrdude: verifying flash memory against MDIO_app.hex:
 avrdude: load data flash data from input file MDIO_app.hex:
 avrdude: input file MDIO_app.hex auto detected as Intel Hex
-avrdude: input file MDIO_app.hex contains 1700 bytes
+avrdude: input file MDIO_app.hex contains 5058 bytes
 avrdude: reading on-chip flash data:
 
-Reading | ################################################## | 100% 0.86s
+Reading | ################################################## | 100% 2.56s
 
 avrdude: verifying ...
-avrdude: 1700 bytes of flash verified
+avrdude: 5058 bytes of flash verified
 avrdude: reading input file "0xff"
 avrdude: writing lfuse (1 bytes):
 
@@ -89,7 +93,7 @@ avrdude: load data hfuse data from input file 0xd9:
 avrdude: input file 0xd9 contains 1 bytes
 avrdude: reading on-chip hfuse data:
 
-Reading | ################################################## | 100% 0.00s
+Reading | ################################################## | 100% 0.02s
 
 avrdude: verifying ...
 avrdude: 1 bytes of hfuse verified
@@ -99,5 +103,5 @@ avrdude done.  Thank you.
 Finished building: avrdudedummy
  
 
-13:10:33 Build Finished (took 2s.771ms)
+13:30:21 Build Finished (took 6s.494ms)
 

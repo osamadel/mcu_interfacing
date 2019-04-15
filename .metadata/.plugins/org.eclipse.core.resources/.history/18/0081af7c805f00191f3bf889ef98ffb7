@@ -1,0 +1,27 @@
+#include "libs/L_STD_TYPES.h"
+#include "HLED/HLED_interface.h"
+#include "H7Segments_private.h"
+#include "H7Segments_interface.h"
+
+void initialize(void) {
+	for (uint8 i=0; i<=7; i++) {
+		addLED(port, i);
+		LED_OFF(port, i);
+	} // end for
+	return;
+} // end initialize
+
+void initializePins(uint8 * pins, uint8 onPort) {
+	port = onPort;
+	for (uint8 i=0; i<=7; i++) {
+		addLED(port, pins[i]);
+		LED_OFF(port, pins[i]);
+	} // end for
+	return;
+} // end initializePins
+
+void display(uint8 number) {
+	for (int j=0; numbers[number][j] != -1; j++)
+		LED_ON(j);
+	return;
+} // end display

@@ -1,0 +1,8 @@
+#ifndef H7SEGMENTS_INTERFACE_H
+#define H7SEGMENTS_INTERFACE_H
+#include "HLED/HLED_interface.h"
+	void H7S_initialize(void);
+	void H7S_initializePins(uint8 *, uint8);
+	void H7S_display(uint8 number);
+
+#endif

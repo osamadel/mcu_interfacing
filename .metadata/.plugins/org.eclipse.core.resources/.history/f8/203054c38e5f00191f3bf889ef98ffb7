@@ -1,0 +1,7 @@
+#include "libs/L_STD_TYPES.h"
+#include "libs/L_UTILS.h"
+#include "MDIO/MDIO_interface.h"
+#include "H7Segments_private.h"
+#include "H7Segments_interface.h"
+
+

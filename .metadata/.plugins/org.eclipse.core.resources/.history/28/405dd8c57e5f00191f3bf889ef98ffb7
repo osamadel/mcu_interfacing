@@ -1,0 +1,8 @@
+#include "libs/L_STD_TYPES.h"
+#include "HLED/HLED_interface.h"
+#include <util/delay.h>
+
+int main(void) {
+
+	return 0;
+}

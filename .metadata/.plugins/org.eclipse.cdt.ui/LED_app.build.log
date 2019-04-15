@@ -1,0 +1,24 @@
+16:51:09 **** Incremental Build of configuration Debug for project LED_app ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LED_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5398 bytes (16.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:LED_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+avrdude: error: could not find USB device "USBasp" with vid=0x16c0 pid=0x5dc
+make: *** [avrdudedummy] Error 1
+
+16:51:09 Build Finished (took 266ms)
+
