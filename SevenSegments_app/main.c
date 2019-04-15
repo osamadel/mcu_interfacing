@@ -4,6 +4,7 @@
 
 int main(void) {
 	H7Seg_initialize();
+
 	while (1) {
 		for (uint8 i=0; i<=9; i++) {
 			H7Seg_display(i);

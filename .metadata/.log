@@ -1433,3 +1433,9 @@ org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$CyclicP
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-15 17:21:15.293
+!MESSAGE Indexed 'two_7seg_app' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-04-15 17:22:12.219
+!MESSAGE Indexed 'two_7seg_app' (3 sources, 10 headers) in 0.028 sec: 108 declarations; 423 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)

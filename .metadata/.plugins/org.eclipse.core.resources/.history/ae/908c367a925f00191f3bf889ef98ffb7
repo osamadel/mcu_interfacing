@@ -1,0 +1,11 @@
+#ifndef H7SEGMENTS_INTERFACE_H
+#define H7SEGMENTS_INTERFACE_H
+
+	void H7Seg_initialize1(void);
+	void H7Seg_initialize2(void);
+	void H7Seg_display1(uint8 num);
+	void H7Seg_display2(uint8 num);
+	void H7Seg_clear1(void);
+	void H7Seg_clear2(void);
+
+#endif
