@@ -1,0 +1,85 @@
+22:28:32 **** Incremental Build of configuration Debug for project app_02 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 app_02.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3584 bytes (10.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:app_02.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "app_02.hex"
+avrdude: input file app_02.hex auto detected as Intel Hex
+avrdude: writing flash (3584 bytes):
+
+Writing | ################################################## | 100% 2.08s
+
+avrdude: 3584 bytes of flash written
+avrdude: verifying flash memory against app_02.hex:
+avrdude: load data flash data from input file app_02.hex:
+avrdude: input file app_02.hex auto detected as Intel Hex
+avrdude: input file app_02.hex contains 3584 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 1.80s
+
+avrdude: verifying ...
+avrdude: 3584 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+22:28:37 Build Finished (took 4s.460ms)
+

@@ -1,0 +1,20 @@
+/*
+ * main.c
+ *
+ *  Created on: Apr 14, 2019
+ *      Author: osama
+ */
+#include <avr/io.h>
+
+
+int main(void) {
+	DDRA = 0b00000001;		// set PORTA.A0 to be OUTPUT
+	PORTA = 0b00000000;		// set PORTA.A0 to LOW
+	while (1) {
+		PORTA = 0x01;
+		delay_ms_(500);
+		PORTA = 0x00;
+		dela_ms_(500);
+	}
+	return 0;
+}

@@ -1,0 +1,90 @@
+/* the following includes must be in this order:
+ * types, utilities, private data, interface prototypes */
+#include "L_STD_TYPES.h"
+#include "L_UTILS.h"
+#include "MDIO_private.h"
+#include "MDIO_interface.h"
+
+void MDIO_SetPinDirection (uint_8 port, uint_8 bitNum, uint_8 status) {
+    // TODO: swtich on
+	swtich (port) {
+	case PORTA:  // ********************* PORTA ****************************
+		// TODO: switch on status
+		switch (status) {
+		case OUTPUT:
+			SET_BIT(MDIO_DDRA, bitNum);				// set DDRA bitNum to 1
+			break;
+		case INPUT_FLOAT:
+			CLR_BIT(MDIO_DDRA, bitNum);				// set DDRA bitNum to 0
+			break;
+		case INPUT_PULLUP:
+			CLR_BIT(MDIO_DDRA, bitNum);				// set DDRA bitNum to 0
+			SET_BIT(MDIO_PORTA, bitNum);			// set PORTA bitNum to 1
+			break;
+		default:
+			break;
+		} // end switch(status)
+		break;
+	case PORTB: // ********************* PORTB ****************************
+		switch (status) {
+		case OUTPUT:
+			SET_BIT(MDIO_DDRB, bitNum);				// set bitNum to 1
+			break;
+		case INPUT_FLOAT:
+			CLR_BIT(MDIO_DDRB, bitNum);				// set bitNum to 0
+			break;
+		case INPUT_PULLUP:
+			CLR_BIT(MDIO_DDRB, bitNum);				// set bitNum to 0
+			SET_BIT(MDIO_PORTB, bitNum);
+			break;
+		default:
+			break;
+		} // end switch(status)
+		break;
+	case PORTC: // ********************* PORTC ****************************
+		switch (status) {
+		case OUTPUT:
+			SET_BIT(MDIO_DDRC, bitNum);				// set bitNum to 1
+			break;
+		case INPUT_FLOAT:
+			CLR_BIT(MDIO_DDRC, bitNum);				// set bitNum to 0
+			break;
+		case INPUT_PULLUP:
+			CLR_BIT(MDIO_DDRC, bitNum);				// set bitNum to 0
+			SET_BIT(MDIO_PORTC, bitNum);
+			break;
+		default:
+			break;
+		} // end switch(status)
+		break;
+	case PORTD: // ********************* PORTD ****************************
+		switch (status) {
+		case OUTPUT:
+			SET_BIT(MDIO_DDRD, bitNum);				// set bitNum to 1
+			break;
+		case INPUT_FLOAT:
+			CLR_BIT(MDIO_DDRD, bitNum);				// set bitNum to 0
+			break;
+		case INPUT_PULLUP:
+			CLR_BIT(MDIO_DDRD, bitNum);				// set bitNum to 0
+			SET_BIT(MDIO_PORTD, bitNum);
+			break;
+		default:
+			break;
+		} // end switch(status)
+		break;
+	} // end switch(port)
+
+	return;
+} // end MDIO_SetPinDirection
+
+void MDIO_SetPinOutput (uint_8 reg, uint_8 bitNum, uint_8 output) {
+    // TODO
+	return;
+} // end MDIO_SetPinOutput
+
+
+uint_8 MDIO_GetPinValue (uint_8 reg, uint_8 bitNum) {
+    // TODO
+	return 0;
+} // end MDIO_GetPinValue

@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: Apr 14, 2019
+ *      Author: osama
+ */
+#define F_CPU 8000000
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main (void) {
+	// initialization
+	DDRA = 0xff;
+
+}

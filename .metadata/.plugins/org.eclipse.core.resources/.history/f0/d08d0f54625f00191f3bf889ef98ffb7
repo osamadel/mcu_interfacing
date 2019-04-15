@@ -1,0 +1,20 @@
+/* the following includes must be in this order:
+ * types, utilities, private data, interface prototypes */
+#include "L_STD_TYPES.h"
+#include "L_UTILS.h"
+#include "MDIO_private.h"
+#include "MDIO_interface.h"
+
+void MDIO_SetPinDirection (uint_8 port, uint_8 bitNum, uint_8 status) {
+    // TODO
+} // end MDIO_SetPinDirection
+
+void MDIO_SetPinOutput (uint_8 port, uint_8 bitNum, uint_8 output) {
+    // TODO
+} // end MDIO_SetPinOutput
+
+
+uint_8 MDIO_GetPinValue (uint_8 port, uint_8 bitNum) {
+    // TODO
+	return 0;
+} // end MDIO_GetPinValue

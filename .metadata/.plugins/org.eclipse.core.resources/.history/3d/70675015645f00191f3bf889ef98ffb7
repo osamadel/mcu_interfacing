@@ -1,0 +1,37 @@
+/* the following includes must be in this order:
+ * types, utilities, private data, interface prototypes */
+#include "L_STD_TYPES.h"
+#include "L_UTILS.h"
+#include "MDIO_private.h"
+#include "MDIO_interface.h"
+
+void MDIO_SetPinDirection (uint_8 reg, uint_8 bitNum, uint_8 status) {
+    // TODO: switch on status
+	switch (status) {
+	case OUTPUT:
+		SET_BIT(reg, bitNum);				// set bitNum to 1
+		break;
+	case INPUT_FLOAT:
+		CLR_BIT(reg, bitNum);				// set bitNum to 0
+		break;
+	case INPUT_PULLUP:
+		CLR_BIT(reg, bitNum);				// set bitNum to 0
+		SET_BIT(*(++&(reg)), bitNum);
+		break;
+	default:
+		break;
+	} // end switch
+
+	return;
+} // end MDIO_SetPinDirection
+
+void MDIO_SetPinOutput (uint_8 reg, uint_8 bitNum, uint_8 output) {
+    // TODO
+	return;
+} // end MDIO_SetPinOutput
+
+
+uint_8 MDIO_GetPinValue (uint_8 reg, uint_8 bitNum) {
+    // TODO
+	return 0;
+} // end MDIO_GetPinValue

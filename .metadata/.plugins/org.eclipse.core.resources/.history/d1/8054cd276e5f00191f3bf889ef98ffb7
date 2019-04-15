@@ -1,0 +1,9 @@
+#include "MDIO_interface.h"
+
+int main(void) {
+
+	MIDO_SetPinDirection(PORTA, 0, INPUT_PULLUP);
+	MDIO_SetPinDirection(PORTA, 1, OUTPUT);
+
+	return 0;
+} // end main
