@@ -22,6 +22,5 @@
     void        MDIO_SetPinOutput      	(uint8 port, uint8 bitNum, uint8 output);
     void		MDIO_SetPortValue		(uint8 port, uint8 val);
     uint8      	MDIO_GetPinValue       	(uint8 port, uint8 bitNum);
-    uint8      	MDIO_GetPortValue       (uint8 port);
 
 #endif

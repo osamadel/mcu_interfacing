@@ -101,6 +101,8 @@ void MDIO_SetPortDirection (uint8 port, uint8 direction) {
 	return;
 }// end MDIO_SetPortDirection
 
+
+
 void MDIO_SetPinOutput (uint8 port, uint8 bitNum, uint8 output) {
     // TODO
 	switch (port) {
@@ -126,23 +128,6 @@ void MDIO_SetPinOutput (uint8 port, uint8 bitNum, uint8 output) {
 	return;
 } // end MDIO_SetPinOutput
 
-void MDIO_SetPortValue (uint8 port, uint8 val) {
-	switch (port) {
-	case PORTA:
-		MDIO_PORTA = val;
-		break;
-	case PORTB:
-		MDIO_PORTB = val;
-		break;
-	case PORTC:
-		MDIO_PORTC = val;
-		break;
-	case PORTD:
-		MDIO_PORTD = val;
-		break;
-	} // end switch(port)
-	return;
-}
 
 uint8 MDIO_GetPinValue (uint8 port, uint8 bitNum) {
     // TODO
@@ -166,24 +151,43 @@ uint8 MDIO_GetPinValue (uint8 port, uint8 bitNum) {
 	return val;
 } // end MDIO_GetPinValue
 
-uint8 MDIO_GetPortValue (uint8 port) {
+uint8 MDIO_GetPortValue (uint8 port, uint8 bitNum) {
     // TODO
 	uint8 val;
 	switch (port) {
 	case PORTA:
-		val = MDIO_PINA;
+		val = GET_BIT(MDIO_PINA, bitNum);
 		break;
 	case PORTB:
-		val = MDIO_PINB;
+		val = GET_BIT(MDIO_PINB, bitNum);
 		break;
 	case PORTC:
-		val = MDIO_PINC;
+		val = GET_BIT(MDIO_PINC, bitNum);
 		break;
 	case PORTD:
-		val = MDIO_PIND;
+		val = GET_BIT(MDIO_PIND, bitNum);
 		break;
 	default:
 		val = 0xff;
 	} // end switch(port)
 	return val;
 } // end MDIO_GetPortValue
+
+
+void MDIO_SetPortValue (uint8 port, uint8 val) {
+	switch (port) {
+	case PORTA:
+		MDIO_PORTA = val;
+		break;
+	case PORTB:
+		MDIO_PORTB = val;
+		break;
+	case PORTC:
+		MDIO_PORTC = val;
+		break;
+	case PORTD:
+		MDIO_PORTD = val;
+		break;
+	} // end switch(port)
+	return;
+}

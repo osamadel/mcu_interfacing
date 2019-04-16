@@ -11,6 +11,8 @@ void writeText(uint8 * text) {
 
 int main(void) {
 	HLCD_init();
+//	uint8 name[] = "Osama Adel ";
+//	uint8 job[] = "Embedded SW Eng";
 	while(1) {
 		HLCD_clear();
 		HLCD_setLine(1);
