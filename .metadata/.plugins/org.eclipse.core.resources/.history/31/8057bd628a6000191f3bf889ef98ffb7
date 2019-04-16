@@ -37,28 +37,13 @@ void HLCD_setLine(uint8 line) {
 
 
 
-void HLCD_shiftDisplay(uint8 direction) {
+void HLCD_shift(uint8 direction) {
 	if (direction == SHIFT_LEFT)
 		HLCD_writeCMD(0b00011000);
 	else if (direction == SHIFT_RIGHT)
 		HLCD_writeCMD(0b00011100);
 	return;
-}// end HLCD_shiftDisplay
-
-
-
-void HLCD_shiftCursor(uint8 direction, uint8 steps) {
-	if (direction == SHIFT_LEFT)
-		for (uint8 i=0; i<steps; i++)
-			HLCD_writeCMD(0b00010000);
-	else if (direction == SHIFT_RIGHT)
-		for (uint8 i=0; i<steps; i++)
-			HLCD_writeCMD(0b00010100);
-	return;
-}// end
-
-
-
+}// end HLCD_shift
 
 void HLCD_init(void) {
 	// set PORTA as OUTPUT

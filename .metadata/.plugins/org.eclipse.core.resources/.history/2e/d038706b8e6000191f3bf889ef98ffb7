@@ -10,6 +10,7 @@ int main(void) {
 		HLCD_setLine(1);
 		writeText("Osama");
 		_delay_ms(1000);
+		HLCD_shiftCursor(SHIFT_LEFT, 2);
 		writeText(" Adel");
 		_delay_ms(1000);
 		HLCD_setLine(2);

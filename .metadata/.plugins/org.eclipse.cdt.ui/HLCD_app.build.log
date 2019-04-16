@@ -1,4 +1,4 @@
-22:53:05 **** Incremental Build of configuration Debug for project HLCD_app ****
+23:43:19 **** Incremental Build of configuration Debug for project HLCD_app ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -8,7 +8,7 @@ e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/..
 ../main.c: In function 'main':
 ../main.c:11: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
 ../main.c:13: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
-../main.c:16: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+../main.c:17: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
 Finished building: ../main.c
  
 Building target: HLCD_app.elf
@@ -30,7 +30,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    8198 bytes (25.0% Full)
+Program:    8940 bytes (27.3% Full)
 (.text + .data + .bootloader)
 
 Data:         34 bytes (1.7% Full)
@@ -45,7 +45,7 @@ E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdud
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: AVR device initialized and ready to accept instructions
 
-Reading | ################################################## | 100% 0.02s
+Reading | ################################################## | 100% 0.00s
 
 avrdude: Device signature = 0x1e9502
 avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
@@ -54,21 +54,21 @@ avrdude: erasing chip
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: reading input file "HLCD_app.hex"
 avrdude: input file HLCD_app.hex auto detected as Intel Hex
-avrdude: writing flash (8198 bytes):
+avrdude: writing flash (8940 bytes):
 
-Writing | ################################################## | 100% 4.70s
+Writing | ################################################## | 100% 5.47s
 
-avrdude: 8198 bytes of flash written
+avrdude: 8940 bytes of flash written
 avrdude: verifying flash memory against HLCD_app.hex:
 avrdude: load data flash data from input file HLCD_app.hex:
 avrdude: input file HLCD_app.hex auto detected as Intel Hex
-avrdude: input file HLCD_app.hex contains 8198 bytes
+avrdude: input file HLCD_app.hex contains 8940 bytes
 avrdude: reading on-chip flash data:
 
-Reading | ################################################## | 100% 4.19s
+Reading | ################################################## | 100% 4.52s
 
 avrdude: verifying ...
-avrdude: 8198 bytes of flash verified
+avrdude: 8940 bytes of flash verified
 avrdude: reading input file "0xff"
 avrdude: writing lfuse (1 bytes):
 
@@ -105,5 +105,5 @@ avrdude done.  Thank you.
 Finished building: avrdudedummy
  
 
-22:53:14 Build Finished (took 9s.889ms)
+23:43:30 Build Finished (took 10s.965ms)
 

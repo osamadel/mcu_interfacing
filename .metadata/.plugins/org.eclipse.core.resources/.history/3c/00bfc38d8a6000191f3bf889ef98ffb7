@@ -13,17 +13,11 @@ int main(void) {
 		writeText(" Adel");
 		_delay_ms(1000);
 		HLCD_setLine(2);
-		HLCD_shiftCursor(SHIFT_RIGHT, 2);
 		writeText("#Emb SW Eng#");
 		_delay_ms(3000);
 
 		for (uint8 i=0; i<16; i++) {
-			HLCD_shiftDisplay(SHIFT_RIGHT);
-			_delay_ms(500);
-		}// end for
-
-		for (uint8 i=0; i<16; i++) {
-			HLCD_shiftDisplay(SHIFT_LEFT);
+			HLCD_shift(SHIFT_RIGHT);
 			_delay_ms(500);
 		}// end for
 

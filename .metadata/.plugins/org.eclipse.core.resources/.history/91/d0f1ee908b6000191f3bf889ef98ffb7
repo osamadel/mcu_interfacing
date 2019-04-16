@@ -43,7 +43,7 @@ void HLCD_shiftDisplay(uint8 direction) {
 	else if (direction == SHIFT_RIGHT)
 		HLCD_writeCMD(0b00011100);
 	return;
-}// end HLCD_shiftDisplay
+}// end HLCD_shift
 
 
 
@@ -55,7 +55,7 @@ void HLCD_shiftCursor(uint8 direction, uint8 steps) {
 		for (uint8 i=0; i<steps; i++)
 			HLCD_writeCMD(0b00010100);
 	return;
-}// end
+}
 
 
 
