@@ -10,6 +10,5 @@
 
 	#define HLCD_FIRST_LINE		1
 	#define HLCD_SECOND_LINE	2
-	#define HLCD_MODE 			HLCD_4_BIT
 
 #endif

@@ -26,10 +26,8 @@ void HLCD_clear(void) {
 
 void HLCD_setLine(uint8 line) {
 	if (line <= 2 && line > 0) {
-		if (line == 1)
-			HLCD_writeCMD(0b10000000);
-		else
-			HLCD_writeCMD(0b11000000);
+		if	 (line == 1) HLCD_writeCMD(0b10000000);
+		else (line == 2) HLCD_writeCMD(0b11000000);
 	}
 	return;
 }// end setLine
@@ -55,15 +53,11 @@ void HLCD_init(void) {
 	MDIO_SetPinDirection(HLCD_RS, OUTPUT);
 	// set E as OUTPUT
 	MDIO_SetPinDirection(HLCD_E, OUTPUT);
-
 	// set E to (0)
 	MDIO_SetPinOutput(HLCD_E, LOW);
 	_delay_ms(50);
-#if HLCD_MODE == HLCD_8_BIT
+
 	HLCD_writeCMD(0b00111100); // set LCD to 8-bit mode, 2 lines, 5x10 font size
-#else
-	HLCD_writeCMD(0b00101100); // set LCD to 4-bit mode, 2 lines, 5x10 font size
-#endif
 	_delay_ms(1);
 	HLCD_writeCMD(0b00001111); // set LCD display ON, cursor ON, cursor blink ON
 	_delay_ms(1);
@@ -105,6 +99,7 @@ void HLCD_writeData(uint8 data) {
 
 #else if HLCD_MODE == HLCD_4_BIT
 /*LCD in 4-bit mode*/
+
 void HLCD_writeCMD(uint8 cmd) {
 	MDIO_SetPinOutput(HLCD_RS, LOW);		// set RS to 0 (Command Reg)
 	MDIO_SetPinOutput(HLCD_RW, LOW);		// Set RW to 0

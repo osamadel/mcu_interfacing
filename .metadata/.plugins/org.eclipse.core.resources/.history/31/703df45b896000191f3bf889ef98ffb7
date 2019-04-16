@@ -105,6 +105,7 @@ void HLCD_writeData(uint8 data) {
 
 #else if HLCD_MODE == HLCD_4_BIT
 /*LCD in 4-bit mode*/
+
 void HLCD_writeCMD(uint8 cmd) {
 	MDIO_SetPinOutput(HLCD_RS, LOW);		// set RS to 0 (Command Reg)
 	MDIO_SetPinOutput(HLCD_RW, LOW);		// Set RW to 0

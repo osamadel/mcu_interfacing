@@ -3,6 +3,7 @@
 
 	#define HLCD_8_BIT 			1
 	#define HLCD_4_BIT 			0
+	#define HLCD_MODE 			HLCD_4_BIT
 	#define HLCD_RS 			PORTD, 0
 	#define HLCD_E 				PORTD, 1
 	#define HLCD_RW 			PORTD, 2

@@ -1,15 +1,39 @@
-22:08:41 **** Incremental Build of configuration Debug for project HLCD_app ****
+22:53:05 **** Incremental Build of configuration Debug for project HLCD_app ****
 make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:11: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+../main.c:13: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+../main.c:16: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 HLCD_app.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    7736 bytes (23.6% Full)
+Program:    8198 bytes (25.0% Full)
 (.text + .data + .bootloader)
 
-Data:         20 bytes (1.0% Full)
+Data:         34 bytes (1.7% Full)
 (.data + .bss + .noinit)
 
 
@@ -21,7 +45,7 @@ E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdud
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: AVR device initialized and ready to accept instructions
 
-Reading | ################################################## | 100% 0.00s
+Reading | ################################################## | 100% 0.02s
 
 avrdude: Device signature = 0x1e9502
 avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
@@ -30,21 +54,21 @@ avrdude: erasing chip
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: reading input file "HLCD_app.hex"
 avrdude: input file HLCD_app.hex auto detected as Intel Hex
-avrdude: writing flash (7736 bytes):
+avrdude: writing flash (8198 bytes):
 
-Writing | ################################################## | 100% 4.26s
+Writing | ################################################## | 100% 4.70s
 
-avrdude: 7736 bytes of flash written
+avrdude: 8198 bytes of flash written
 avrdude: verifying flash memory against HLCD_app.hex:
 avrdude: load data flash data from input file HLCD_app.hex:
 avrdude: input file HLCD_app.hex auto detected as Intel Hex
-avrdude: input file HLCD_app.hex contains 7736 bytes
+avrdude: input file HLCD_app.hex contains 8198 bytes
 avrdude: reading on-chip flash data:
 
-Reading | ################################################## | 100% 3.94s
+Reading | ################################################## | 100% 4.19s
 
 avrdude: verifying ...
-avrdude: 7736 bytes of flash verified
+avrdude: 8198 bytes of flash verified
 avrdude: reading input file "0xff"
 avrdude: writing lfuse (1 bytes):
 
@@ -63,7 +87,7 @@ avrdude: 1 bytes of lfuse verified
 avrdude: reading input file "0xd9"
 avrdude: writing hfuse (1 bytes):
 
-Writing | ################################################## | 100% 0.02s
+Writing | ################################################## | 100% 0.00s
 
 avrdude: 1 bytes of hfuse written
 avrdude: verifying hfuse memory against 0xd9:
@@ -81,5 +105,5 @@ avrdude done.  Thank you.
 Finished building: avrdudedummy
  
 
-22:08:49 Build Finished (took 8s.748ms)
+22:53:14 Build Finished (took 9s.889ms)
 
