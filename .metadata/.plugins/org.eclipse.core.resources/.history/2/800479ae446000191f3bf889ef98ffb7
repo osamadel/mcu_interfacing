@@ -1,0 +1,23 @@
+#include "libraries/L_STD_TYPES.h"
+#include "HAL/HLCD_interface.h"
+//#include "MCAL/MDIO_interface.h"
+#include <util/delay.h>
+
+int main(void) {
+	HLCD_init();
+	uint8 name[] = "Osama Adel ";
+//	uint8 job[] = "Embedded SW Eng";
+	while(1) {
+		HLCD_clear();
+		for (uint8 i=0; name[i]!='\0'; i++)
+			HLCD_writeData(name[i]);
+		_delay_ms(2000);
+//		for (uint8 i=0; name[i]!='\0'; i++)
+//			HLCD_writeData(job[i]);
+		HLCD_writeData(':');
+		HLCD_writeData('D');
+		HLCD_writeData('\n');
+		_delay_ms(2000);
+	}// end while(1)
+	return 0;
+}

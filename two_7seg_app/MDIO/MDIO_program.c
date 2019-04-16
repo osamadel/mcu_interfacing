@@ -109,21 +109,22 @@ void MDIO_SetPinOutput (uint8 port, uint8 bitNum, uint8 output) {
 
 uint8 MDIO_GetPinValue (uint8 port, uint8 bitNum) {
     // TODO
+	uint8 val;
 	switch (port) {
 	case PORTA:
-		return GET_BIT(MDIO_PINA, bitNum);
+		val = GET_BIT(MDIO_PINA, bitNum);
 		break;
 	case PORTB:
-		return GET_BIT(MDIO_PINB, bitNum);
+		val = GET_BIT(MDIO_PINB, bitNum);
 		break;
 	case PORTC:
-		return GET_BIT(MDIO_PINC, bitNum);
+		val = GET_BIT(MDIO_PINC, bitNum);
 		break;
 	case PORTD:
-		return GET_BIT(MDIO_PIND, bitNum);
+		val = GET_BIT(MDIO_PIND, bitNum);
 		break;
 	default:
-		break;
+		val = 0xff;
 	} // end switch(port)
-	return 0;
+	return val;
 } // end MDIO_GetPinValue

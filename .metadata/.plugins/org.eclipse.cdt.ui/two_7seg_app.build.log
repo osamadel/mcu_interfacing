@@ -1,5 +1,10 @@
-18:28:55 **** Incremental Build of configuration Debug for project two_7seg_app ****
+18:48:48 **** Incremental Build of configuration Debug for project two_7seg_app ****
 make all 
+Building file: ../MDIO/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MDIO/MDIO_program.d" -MT"MDIO/MDIO_program.o" -c -o "MDIO/MDIO_program.o" "../MDIO/MDIO_program.c"
+Finished building: ../MDIO/MDIO_program.c
+ 
 Building file: ../main.c
 Invoking: AVR Compiler
 avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
@@ -26,7 +31,7 @@ AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    6194 bytes (18.9% Full)
+Program:    6186 bytes (18.9% Full)
 (.text + .data + .bootloader)
 
 Data:        184 bytes (9.0% Full)
@@ -50,25 +55,25 @@ avrdude: erasing chip
 avrdude: warning: cannot set sck period. please check for usbasp firmware update.
 avrdude: reading input file "two_7seg_app.hex"
 avrdude: input file two_7seg_app.hex auto detected as Intel Hex
-avrdude: writing flash (6194 bytes):
+avrdude: writing flash (6186 bytes):
 
-Writing | ################################################## | 100% 3.64s
+Writing | ################################################## | 100% 3.50s
 
-avrdude: 6194 bytes of flash written
+avrdude: 6186 bytes of flash written
 avrdude: verifying flash memory against two_7seg_app.hex:
 avrdude: load data flash data from input file two_7seg_app.hex:
 avrdude: input file two_7seg_app.hex auto detected as Intel Hex
-avrdude: input file two_7seg_app.hex contains 6194 bytes
+avrdude: input file two_7seg_app.hex contains 6186 bytes
 avrdude: reading on-chip flash data:
 
-Reading | ################################################## | 100% 3.14s
+Reading | ################################################## | 100% 3.13s
 
 avrdude: verifying ...
-avrdude: 6194 bytes of flash verified
+avrdude: 6186 bytes of flash verified
 avrdude: reading input file "0xff"
 avrdude: writing lfuse (1 bytes):
 
-Writing | ################################################## | 100% 0.00s
+Writing | ################################################## | 100% 0.02s
 
 avrdude: 1 bytes of lfuse written
 avrdude: verifying lfuse memory against 0xff:
@@ -101,5 +106,5 @@ avrdude done.  Thank you.
 Finished building: avrdudedummy
  
 
-18:29:02 Build Finished (took 7s.738ms)
+18:48:55 Build Finished (took 7s.691ms)
 

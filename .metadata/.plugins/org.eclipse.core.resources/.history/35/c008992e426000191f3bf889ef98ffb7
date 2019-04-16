@@ -1,0 +1,11 @@
+#include "libraries/L_STD_TYPES.h"
+#include "HAL/HLCD_interface.h"
+#include <util/delay.h>
+
+int main(void) {
+	HLCD_init();
+	while(1) {
+		HLCD_writeData('O');
+	}// end while(1)
+	return 0;
+}

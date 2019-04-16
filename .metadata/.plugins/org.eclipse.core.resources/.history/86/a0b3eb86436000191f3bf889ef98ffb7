@@ -1,0 +1,26 @@
+#include "libraries/L_STD_TYPES.h"
+//#include "HAL/HLCD_interface.h"
+#include "MCAL/MDIO_interface.h"
+#include <util/delay.h>
+
+int main(void) {
+//	HLCD_init();
+	MDIO_SetPinDirection(PORTC, 0, OUTPUT);
+	MDIO_SetPinDirection(PORTC, 1, OUTPUT);
+	MDIO_SetPinDirection(PORTC, 2, OUTPUT);
+	while(1) {
+//		HLCD_writeData('O');
+
+		MDIO_SetPinOutput(PORTC, 0, LOW);
+		MDIO_SetPinOutput(PORTC, 1, LOW);
+		MDIO_SetPinOutput(PORTC, 2, LOW);
+
+		MDIO_SetPinOutput(PORTC, 0, HIGH);
+		_delay_ms(1000);
+		MDIO_SetPinOutput(PORTC, 1, HIGH);
+		_delay_ms(1000);
+		MDIO_SetPinOutput(PORTC, 2, HIGH);
+		_delay_ms(1000);
+	}// end while(1)
+	return 0;
+}

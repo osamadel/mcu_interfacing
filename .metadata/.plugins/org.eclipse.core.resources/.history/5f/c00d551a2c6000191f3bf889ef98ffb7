@@ -1,0 +1,24 @@
+#include "../libraries/L_STD_TYPES.h"
+#include "../libraries/L_UTILS.h"
+#include "HLCD_private.h"
+#include "HLCD_interface.h"
+
+#if HLCD_MODE == HLCD_8_BIT
+
+// LCD in 8-bit mode
+
+void HLCD_writeCMD(uint8 cmd) {
+	return;
+}// end HLCD_writeCMD
+
+void HLCD_writeData(uint8 data) {
+	return;
+}// end HLCD_writeData
+
+#else
+// LCD in 4-bit mode
+int main(void) {
+
+	return 0;
+}// end main()
+#endif

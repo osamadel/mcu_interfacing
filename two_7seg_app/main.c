@@ -64,10 +64,13 @@ int main(void) {
 	H7Seg_initialize();
 	initialize8LEDs();
 	initializeDIP();
-	uint8 password = 0;
+	uint8 pass0 = MDIO_GetPinValue(PORTD, 0);
+//	uint8 pass1 = MDIO_GetPinValue(PORTD, 1);
+//	uint8 pass2 = MDIO_GetPinValue(PORTD, 2);
+//	uint8 pass3 = MDIO_GetPinValue(PORTD, 3);
 	while (1) {
 		for (uint8 i=0; i<=9; i++) {
-			if (MDIO_GetPinValue(PORTD, 0) == password) {
+			if (pass0 == 0) {
 				LEDTrain();
 				H7Seg_display(i);
 //				_delay_ms(1000);

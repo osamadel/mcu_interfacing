@@ -1,0 +1,21 @@
+#ifndef HLCD_PRIVATE_H
+#define HLCD_PRIVATE_H
+
+	#define HLCD_8_BIT 			1
+	#define HLCD_4_BIT 			0
+	#define HLCD_MODE 			HLCD_8_BIT
+	#define HLCD_RS 			PORTB, 0
+	#define HLCD_E 				PORTB, 1
+	#define HLCD_RW 			PORTB, 2
+	#define HLCD_8PINS			PORTA
+	#define HLCD_D0 			PORTA, 0
+	#define HLCD_D1 			PORTA, 1
+	#define HLCD_D2 			PORTA, 2
+	#define HLCD_D3 			PORTA, 3
+	#define HLCD_D4 			PORTA, 4
+	#define HLCD_D5 			PORTA, 5
+	#define HLCD_D6 			PORTA, 6
+	#define HLCD_D7 			PORTA, 7
+
+
+#endif

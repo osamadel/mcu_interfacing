@@ -1,0 +1,8 @@
+#ifndef HLCD_PRIVATE_H
+#define HLCD_PRIVATE_H
+
+	#define HLCD_8_BIT 1
+	#define HLCD_4_BIT 0
+	#define HLCD_MODE HLCD_8_BIT
+
+#endif

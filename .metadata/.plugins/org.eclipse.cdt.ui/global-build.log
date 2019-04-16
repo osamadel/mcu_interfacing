@@ -21061,3 +21061,2971 @@ avrdude done.  Thank you.
 
 Finished building: avrdudedummy
  
+18:33:00 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6248 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6248 bytes):
+
+Writing | ################################################## | 100% 3.53s
+
+avrdude: 6248 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6248 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.17s
+
+avrdude: verifying ...
+avrdude: 6248 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:35:16 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6304 bytes (19.2% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6304 bytes):
+
+Writing | ################################################## | 100% 3.53s
+
+avrdude: 6304 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6304 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.19s
+
+avrdude: verifying ...
+avrdude: 6304 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:37:04 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6244 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6244 bytes):
+
+Writing | ################################################## | 100% 3.50s
+
+avrdude: 6244 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6244 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.16s
+
+avrdude: verifying ...
+avrdude: 6244 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:40:34 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6236 bytes (19.0% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6236 bytes):
+
+Writing | ################################################## | 100% 3.51s
+
+avrdude: 6236 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6236 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.15s
+
+avrdude: verifying ...
+avrdude: 6236 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:42:50 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6244 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6244 bytes):
+
+Writing | ################################################## | 100% 3.49s
+
+avrdude: 6244 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6244 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.17s
+
+avrdude: verifying ...
+avrdude: 6244 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:44:00 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6192 bytes (18.9% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6192 bytes):
+
+Writing | ################################################## | 100% 3.47s
+
+avrdude: 6192 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6192 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.14s
+
+avrdude: verifying ...
+avrdude: 6192 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+18:48:48 **** Incremental Build of configuration Debug for project two_7seg_app ****
+make all 
+Building file: ../MDIO/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MDIO/MDIO_program.d" -MT"MDIO/MDIO_program.o" -c -o "MDIO/MDIO_program.o" "../MDIO/MDIO_program.c"
+Finished building: ../MDIO/MDIO_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: two_7seg_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,two_7seg_app.map -mmcu=atmega32 -o "two_7seg_app.elf"  ./MDIO/MDIO_program.o  ./H7Segments_program.o ./main.o   
+Finished building target: two_7seg_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S two_7seg_app.elf  >"two_7seg_app.lss"
+Finished building: two_7seg_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex two_7seg_app.elf  "two_7seg_app.hex"
+Finished building: two_7seg_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 two_7seg_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6186 bytes (18.9% Full)
+(.text + .data + .bootloader)
+
+Data:        184 bytes (9.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:two_7seg_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "two_7seg_app.hex"
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: writing flash (6186 bytes):
+
+Writing | ################################################## | 100% 3.50s
+
+avrdude: 6186 bytes of flash written
+avrdude: verifying flash memory against two_7seg_app.hex:
+avrdude: load data flash data from input file two_7seg_app.hex:
+avrdude: input file two_7seg_app.hex auto detected as Intel Hex
+avrdude: input file two_7seg_app.hex contains 6186 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.13s
+
+avrdude: verifying ...
+avrdude: 6186 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:59:42 **** Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../MCAL/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/MDIO_program.d" -MT"MCAL/MDIO_program.o" -c -o "MCAL/MDIO_program.o" "../MCAL/MDIO_program.c"
+../MCAL/MDIO_program.c: In function 'MDIO_SetPinDirection':
+../MCAL/MDIO_program.c:15: warning: value computed is not used
+../MCAL/MDIO_program.c:18: warning: value computed is not used
+../MCAL/MDIO_program.c:21: warning: value computed is not used
+../MCAL/MDIO_program.c:22: warning: value computed is not used
+../MCAL/MDIO_program.c:32: warning: value computed is not used
+../MCAL/MDIO_program.c:35: warning: value computed is not used
+../MCAL/MDIO_program.c:38: warning: value computed is not used
+../MCAL/MDIO_program.c:39: warning: value computed is not used
+../MCAL/MDIO_program.c:49: warning: value computed is not used
+../MCAL/MDIO_program.c:52: warning: value computed is not used
+../MCAL/MDIO_program.c:55: warning: value computed is not used
+../MCAL/MDIO_program.c:56: warning: value computed is not used
+../MCAL/MDIO_program.c:66: warning: value computed is not used
+../MCAL/MDIO_program.c:69: warning: value computed is not used
+../MCAL/MDIO_program.c:72: warning: value computed is not used
+../MCAL/MDIO_program.c:73: warning: value computed is not used
+../MCAL/MDIO_program.c: In function 'MDIO_SetPinOutput':
+../MCAL/MDIO_program.c:88: warning: value computed is not used
+../MCAL/MDIO_program.c:89: warning: value computed is not used
+../MCAL/MDIO_program.c:92: warning: value computed is not used
+../MCAL/MDIO_program.c:93: warning: value computed is not used
+../MCAL/MDIO_program.c:96: warning: value computed is not used
+../MCAL/MDIO_program.c:97: warning: value computed is not used
+../MCAL/MDIO_program.c:100: warning: value computed is not used
+../MCAL/MDIO_program.c:101: warning: value computed is not used
+Finished building: ../MCAL/MDIO_program.c
+ 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:6:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building file: ../HAL/HLED_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLED_program.d" -MT"HAL/HLED_program.o" -c -o "HAL/HLED_program.o" "../HAL/HLED_program.c"
+Finished building: ../HAL/HLED_program.c
+ 
+Building file: ../HAL/HSevenSegments_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HSevenSegments_program.d" -MT"HAL/HSevenSegments_program.o" -c -o "HAL/HSevenSegments_program.o" "../HAL/HSevenSegments_program.c"
+Finished building: ../HAL/HSevenSegments_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:9: warning: implicit declaration of function 'HLCD_clear'
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6096 bytes (18.6% Full)
+(.text + .data + .bootloader)
+
+Data:         20 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6096 bytes):
+
+Writing | ################################################## | 100% 3.62s
+
+avrdude: 6096 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6096 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.09s
+
+avrdude: verifying ...
+avrdude: 6096 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:01:27 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:6:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6096 bytes (18.6% Full)
+(.text + .data + .bootloader)
+
+Data:         20 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6096 bytes):
+
+Writing | ################################################## | 100% 3.63s
+
+avrdude: 6096 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6096 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.09s
+
+avrdude: verifying ...
+avrdude: 6096 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:02:41 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5726 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (5726 bytes):
+
+Writing | ################################################## | 100% 3.41s
+
+avrdude: 5726 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 5726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.90s
+
+avrdude: verifying ...
+avrdude: 5726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:05:54 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:63:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5726 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (5726 bytes):
+
+Writing | ################################################## | 100% 3.39s
+
+avrdude: 5726 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 5726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.90s
+
+avrdude: verifying ...
+avrdude: 5726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:14:38 **** Clean-only build of configuration Debug for project HLCD_app ****
+make clean 
+rm -rf  HLCD_app.hex  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o  avrdudedummy  sizedummy  HLCD_app.lss  ./MCAL/MDIO_program.d  ./HAL/HLCD_program.d ./HAL/HLED_program.d ./HAL/HSevenSegments_program.d  ./main.d  HLCD_app.elf
+ 
+14:14:38 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../MCAL/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/MDIO_program.d" -MT"MCAL/MDIO_program.o" -c -o "MCAL/MDIO_program.o" "../MCAL/MDIO_program.c"
+../MCAL/MDIO_program.c: In function 'MDIO_SetPinDirection':
+../MCAL/MDIO_program.c:15: warning: value computed is not used
+../MCAL/MDIO_program.c:18: warning: value computed is not used
+../MCAL/MDIO_program.c:21: warning: value computed is not used
+../MCAL/MDIO_program.c:22: warning: value computed is not used
+../MCAL/MDIO_program.c:32: warning: value computed is not used
+../MCAL/MDIO_program.c:35: warning: value computed is not used
+../MCAL/MDIO_program.c:38: warning: value computed is not used
+../MCAL/MDIO_program.c:39: warning: value computed is not used
+../MCAL/MDIO_program.c:49: warning: value computed is not used
+../MCAL/MDIO_program.c:52: warning: value computed is not used
+../MCAL/MDIO_program.c:55: warning: value computed is not used
+../MCAL/MDIO_program.c:56: warning: value computed is not used
+../MCAL/MDIO_program.c:66: warning: value computed is not used
+../MCAL/MDIO_program.c:69: warning: value computed is not used
+../MCAL/MDIO_program.c:72: warning: value computed is not used
+../MCAL/MDIO_program.c:73: warning: value computed is not used
+../MCAL/MDIO_program.c: In function 'MDIO_SetPinOutput':
+../MCAL/MDIO_program.c:88: warning: value computed is not used
+../MCAL/MDIO_program.c:89: warning: value computed is not used
+../MCAL/MDIO_program.c:92: warning: value computed is not used
+../MCAL/MDIO_program.c:93: warning: value computed is not used
+../MCAL/MDIO_program.c:96: warning: value computed is not used
+../MCAL/MDIO_program.c:97: warning: value computed is not used
+../MCAL/MDIO_program.c:100: warning: value computed is not used
+../MCAL/MDIO_program.c:101: warning: value computed is not used
+Finished building: ../MCAL/MDIO_program.c
+ 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building file: ../HAL/HLED_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLED_program.d" -MT"HAL/HLED_program.o" -c -o "HAL/HLED_program.o" "../HAL/HLED_program.c"
+Finished building: ../HAL/HLED_program.c
+ 
+Building file: ../HAL/HSevenSegments_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HSevenSegments_program.d" -MT"HAL/HSevenSegments_program.o" -c -o "HAL/HSevenSegments_program.o" "../HAL/HSevenSegments_program.c"
+Finished building: ../HAL/HSevenSegments_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5726 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (5726 bytes):
+
+Writing | ################################################## | 100% 3.40s
+
+avrdude: 5726 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 5726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.90s
+
+avrdude: verifying ...
+avrdude: 5726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:17:39 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5726 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (5726 bytes):
+
+Writing | ################################################## | 100% 3.42s
+
+avrdude: 5726 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 5726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.90s
+
+avrdude: verifying ...
+avrdude: 5726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:18:15 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5726 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (5726 bytes):
+
+Writing | ################################################## | 100% 3.44s
+
+avrdude: 5726 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 5726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.90s
+
+avrdude: verifying ...
+avrdude: 5726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:23:24 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:64:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6472 bytes (19.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6472 bytes):
+
+Writing | ################################################## | 100% 3.89s
+
+avrdude: 6472 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6472 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.27s
+
+avrdude: verifying ...
+avrdude: 6472 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:24:11 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6502 bytes (19.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6502 bytes):
+
+Writing | ################################################## | 100% 3.90s
+
+avrdude: 6502 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6502 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.29s
+
+avrdude: verifying ...
+avrdude: 6502 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:26:50 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6502 bytes (19.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6502 bytes):
+
+Writing | ################################################## | 100% 3.89s
+
+avrdude: 6502 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6502 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.29s
+
+avrdude: verifying ...
+avrdude: 6502 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:27:35 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6502 bytes (19.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6502 bytes):
+
+Writing | ################################################## | 100% 4.09s
+
+avrdude: 6502 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6502 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.28s
+
+avrdude: verifying ...
+avrdude: 6502 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:28:48 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6502 bytes (19.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6502 bytes):
+
+Writing | ################################################## | 100% 3.76s
+
+avrdude: 6502 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6502 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.29s
+
+avrdude: verifying ...
+avrdude: 6502 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:29:54 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../MCAL/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/MDIO_program.d" -MT"MCAL/MDIO_program.o" -c -o "MCAL/MDIO_program.o" "../MCAL/MDIO_program.c"
+Finished building: ../MCAL/MDIO_program.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7290 bytes (22.2% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7290 bytes):
+
+Writing | ################################################## | 100% 4.09s
+
+avrdude: 7290 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7290 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.69s
+
+avrdude: verifying ...
+avrdude: 7290 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:31:16 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7290 bytes (22.2% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7290 bytes):
+
+Writing | ################################################## | 100% 4.09s
+
+avrdude: 7290 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7290 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.69s
+
+avrdude: verifying ...
+avrdude: 7290 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:32:39 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7290 bytes (22.2% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7290 bytes):
+
+Writing | ################################################## | 100% 4.09s
+
+avrdude: 7290 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7290 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.68s
+
+avrdude: verifying ...
+avrdude: 7290 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:34:39 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:7: warning: implicit declaration of function 'HLCD_init'
+../main.c:9: warning: implicit declaration of function 'HLCD_writeData'
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6516 bytes (19.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6516 bytes):
+
+Writing | ################################################## | 100% 3.64s
+
+avrdude: 6516 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6516 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.31s
+
+avrdude: verifying ...
+avrdude: 6516 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:35:08 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:7: warning: implicit declaration of function 'HLCD_init'
+../main.c:8: warning: implicit declaration of function 'HLCD_writeData'
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6516 bytes (19.9% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (6516 bytes):
+
+Writing | ################################################## | 100% 3.64s
+
+avrdude: 6516 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 6516 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.29s
+
+avrdude: verifying ...
+avrdude: 6516 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:37:31 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:7: warning: implicit declaration of function 'HLCD_init'
+../main.c:11: warning: implicit declaration of function 'HLCD_clear'
+../main.c:13: warning: implicit declaration of function 'HLCD_writeData'
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7320 bytes (22.3% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (1.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7320 bytes):
+
+Writing | ################################################## | 100% 4.10s
+
+avrdude: 7320 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7320 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.72s
+
+avrdude: verifying ...
+avrdude: 7320 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:39:05 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7130 bytes (21.8% Full)
+(.text + .data + .bootloader)
+
+Data:         22 bytes (1.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7130 bytes):
+
+Writing | ################################################## | 100% 4.00s
+
+avrdude: 7130 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7130 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.61s
+
+avrdude: verifying ...
+avrdude: 7130 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:39:31 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7122 bytes (21.7% Full)
+(.text + .data + .bootloader)
+
+Data:         20 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7122 bytes):
+
+Writing | ################################################## | 100% 3.97s
+
+avrdude: 7122 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7122 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.60s
+
+avrdude: verifying ...
+avrdude: 7122 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:41:16 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:4:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:18: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+../main.c:22: warning: pointer targets in passing argument 1 of 'writeText' differ in signedness
+Finished building: ../main.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7090 bytes (21.6% Full)
+(.text + .data + .bootloader)
+
+Data:         20 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "HLCD_app.hex"
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: writing flash (7090 bytes):
+
+Writing | ################################################## | 100% 3.92s
+
+avrdude: 7090 bytes of flash written
+avrdude: verifying flash memory against HLCD_app.hex:
+avrdude: load data flash data from input file HLCD_app.hex:
+avrdude: input file HLCD_app.hex auto detected as Intel Hex
+avrdude: input file HLCD_app.hex contains 7090 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.58s
+
+avrdude: verifying ...
+avrdude: 7090 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
