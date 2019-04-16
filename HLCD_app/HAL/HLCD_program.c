@@ -36,6 +36,13 @@ void HLCD_init(void) {
 	return;
 }// end HLCD_init
 
+uint8 HLCD_setLine(uint8 line) {
+	if (line > 2 || line == 0) return -1;
+	else if(line == 2) HLCD_writeCMD(0b11000000);
+	else if(line == 1) HLCD_writeCMD(0b10000000);
+	return 0;
+}// end setLine
+
 void HLCD_writeCMD(uint8 cmd) {
 	MDIO_SetPinOutput(HLCD_RS, LOW);		// set RS to 0 (Command Reg)
 	MDIO_SetPinOutput(HLCD_RW, LOW);		// Set RW to 0
@@ -83,7 +90,8 @@ void HLCD_init(void) {
 	// set E to (0)
 	MDIO_SetPinOutput(HLCD_E, LOW);
 	_delay_ms(50);
-	HLCD_writeCMD(0b00101100); // set LCD to 8-bit mode, 2 lines, 5x10 font size
+
+	HLCD_writeCMD(0b00101100); // set LCD to 4-bit mode, 2 lines, 5x10 font size
 	_delay_ms(1);
 	HLCD_writeCMD(0b00001111); // set LCD display ON, cursor ON, cursor blink ON
 	_delay_ms(1);
@@ -94,12 +102,55 @@ void HLCD_init(void) {
 	return;
 }// end HLCD_init
 
+uint8 HLCD_setLine(uint8 line) {
+	if (line > 2 || line == 0) return -1;
+	else if(line == 1) HLCD_writeCMD(0b10000000);
+	else if(line == 2) HLCD_writeCMD(0b11000000);
+	return 0;
+}// end setLine
+
 void HLCD_writeCMD(uint8 cmd) {
+	MDIO_SetPinOutput(HLCD_RS, LOW);		// set RS to 0 (Command Reg)
+	MDIO_SetPinOutput(HLCD_RW, LOW);		// Set RW to 0
+
+	uint8 H = cmd & 0xF0;
+	uint8 L = (cmd & 0x0F) << 4;
+
+	MDIO_SetPortValue(HLCD_8PINS, H);		// Write the command to D4-D7
+	MDIO_SetPinOutput(HLCD_E, HIGH);		// Set E to 1 (Read Data)
+	_delay_ms(2);							// delay 2ms
+	MDIO_SetPinOutput(HLCD_E, LOW);			// Set E to 0 (falling edge: Write Data)
+
+	MDIO_SetPortValue(HLCD_8PINS, L);		// Write the command to D4-D7
+	MDIO_SetPinOutput(HLCD_E, HIGH);		// Set E to 1 (Read Data)
+	_delay_ms(2);							// delay 2ms
+	MDIO_SetPinOutput(HLCD_E, LOW);			// Set E to 0 (falling edge: Write Data)
+
 	return;
 }// end HLCD_writeCMD
 
 void HLCD_writeData(uint8 data) {
+	MDIO_SetPinOutput(HLCD_RS, HIGH);		// set RS to 1 (Data Reg)
+	MDIO_SetPinOutput(HLCD_RW, LOW); 		// Set RW to 0
+
+	uint8 H = data & 0xF0;
+	uint8 L = (data & 0x0F) << 4;
+
+	MDIO_SetPortValue(HLCD_8PINS, H);	// Write the data to D0-D7
+	MDIO_SetPinOutput(HLCD_E, HIGH); 		// Set E to 1 (Read Data)
+	_delay_ms(2);							// delay 2ms
+	MDIO_SetPinOutput(HLCD_E, LOW); 		// Set E to 0 (falling edge: Write Data)
+
+	MDIO_SetPortValue(HLCD_8PINS, L);	// Write the data to D0-D7
+	MDIO_SetPinOutput(HLCD_E, HIGH); 		// Set E to 1 (Read Data)
+	_delay_ms(2);							// delay 2ms
+	MDIO_SetPinOutput(HLCD_E, LOW); 		// Set E to 0 (falling edge: Write Data)
 	return;
 }// end HLCD_writeData
+
+void HLCD_clear(void) {
+	HLCD_writeCMD(0b00000001);
+	return;
+}// end HLCD_clear
 
 #endif

@@ -5,5 +5,6 @@
 	void HLCD_writeCMD(uint8);
 	void HLCD_writeData(uint8);
 	void HLCD_clear(void);
+	uint8 HLCD_setLine(uint8 line);
 
 #endif

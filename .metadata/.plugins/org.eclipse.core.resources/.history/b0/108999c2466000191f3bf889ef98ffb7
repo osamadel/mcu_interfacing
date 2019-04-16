@@ -1,0 +1,9 @@
+#ifndef HLCD_INTERFACE_H
+#define HLCD_INTERFACE_H
+
+	void HLCD_init(void);
+	void HLCD_writeCMD(uint8);
+	void HLCD_writeData(uint8);
+	void HLCD_clear(void);
+
+#endif

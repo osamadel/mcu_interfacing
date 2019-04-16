@@ -15,12 +15,17 @@ int main(void) {
 //	uint8 job[] = "Embedded SW Eng";
 	while(1) {
 		HLCD_clear();
+		HLCD_setLine(1);
 		writeText("Osama");
+		_delay_ms(2000);
+		HLCD_setLine(2);
+		writeText("Adel");
 		_delay_ms(2000);
 //		for (uint8 i=0; name[i]!='\0'; i++)
 //			HLCD_writeData(job[i]);
-		writeText(" Adel");
-		_delay_ms(2000);
+//		HLCD_setLine(2);
+//		writeText("Adel");
+//		_delay_ms(2000);
 	}// end while(1)
 	return 0;
 }
