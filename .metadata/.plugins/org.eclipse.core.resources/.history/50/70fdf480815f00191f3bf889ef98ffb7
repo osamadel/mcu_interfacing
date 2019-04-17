@@ -1,9 +1,0 @@
-#include "libs/L_STD_TYPES.h"
-#include "H7Segments_interface.h"
-#include <util/delay.h>
-
-int main(void) {
-
-
-	return 0;
-} // end main

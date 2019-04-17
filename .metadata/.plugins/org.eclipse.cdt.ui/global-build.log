@@ -30143,3 +30143,2759 @@ avrdude done.  Thank you.
 
 Finished building: avrdudedummy
  
+07:40:43 **** Incremental Build of configuration Debug for project HLCD_app ****
+make all 
+Building file: ../HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
+In file included from ../HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../HAL/HLCD_program.c:127:7: warning: extra tokens at end of #else directive
+Finished building: ../HAL/HLCD_program.c
+ 
+Building target: HLCD_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: HLCD_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
+Finished building: HLCD_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
+Finished building: HLCD_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HLCD_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8940 bytes (27.3% Full)
+(.text + .data + .bootloader)
+
+Data:         34 bytes (1.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:HLCD_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+avrdude: error: could not find USB device "USBasp" with vid=0x16c0 pid=0x5dc
+make: *** [avrdudedummy] Error 1
+11:21:37 **** Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:96: error: duplicate case value
+../main.c:53: error: previously used here
+../main.c:108: error: 'default' label not within a switch statement
+make: *** [main.o] Error 1
+11:22:39 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./main.o   
+./main.o: In function `main':
+../main.c:7: undefined reference to `addLED'
+../main.c:8: undefined reference to `addLED'
+../main.c:9: undefined reference to `addLED'
+../main.c:10: undefined reference to `addLED'
+../main.c:11: undefined reference to `addLED'
+./main.o:../main.c:12: more undefined references to `addLED' follow
+./main.o: In function `main':
+../main.c:15: undefined reference to `HKeyPad_init'
+../main.c:17: undefined reference to `HKeyPad_getKey'
+../main.c:21: undefined reference to `LED_ON'
+../main.c:22: undefined reference to `LED_OFF'
+../main.c:23: undefined reference to `LED_OFF'
+../main.c:24: undefined reference to `LED_OFF'
+../main.c:25: undefined reference to `LED_OFF'
+../main.c:26: undefined reference to `LED_OFF'
+./main.o:../main.c:27: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:32: undefined reference to `LED_ON'
+../main.c:33: undefined reference to `LED_OFF'
+../main.c:34: undefined reference to `LED_OFF'
+../main.c:35: undefined reference to `LED_OFF'
+../main.c:36: undefined reference to `LED_OFF'
+../main.c:37: undefined reference to `LED_OFF'
+./main.o:../main.c:38: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:43: undefined reference to `LED_ON'
+../main.c:44: undefined reference to `LED_OFF'
+../main.c:45: undefined reference to `LED_OFF'
+../main.c:46: undefined reference to `LED_OFF'
+../main.c:47: undefined reference to `LED_OFF'
+../main.c:48: undefined reference to `LED_OFF'
+./main.o:../main.c:49: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:54: undefined reference to `LED_ON'
+../main.c:55: undefined reference to `LED_OFF'
+../main.c:56: undefined reference to `LED_OFF'
+../main.c:57: undefined reference to `LED_OFF'
+../main.c:58: undefined reference to `LED_OFF'
+../main.c:59: undefined reference to `LED_OFF'
+./main.o:../main.c:60: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:65: undefined reference to `LED_ON'
+../main.c:66: undefined reference to `LED_OFF'
+../main.c:67: undefined reference to `LED_OFF'
+../main.c:68: undefined reference to `LED_OFF'
+../main.c:69: undefined reference to `LED_OFF'
+../main.c:70: undefined reference to `LED_OFF'
+./main.o:../main.c:71: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:76: undefined reference to `LED_ON'
+../main.c:77: undefined reference to `LED_OFF'
+../main.c:78: undefined reference to `LED_OFF'
+../main.c:79: undefined reference to `LED_OFF'
+../main.c:80: undefined reference to `LED_OFF'
+../main.c:81: undefined reference to `LED_OFF'
+./main.o:../main.c:82: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:87: undefined reference to `LED_ON'
+../main.c:88: undefined reference to `LED_OFF'
+../main.c:89: undefined reference to `LED_OFF'
+../main.c:90: undefined reference to `LED_OFF'
+../main.c:91: undefined reference to `LED_OFF'
+../main.c:92: undefined reference to `LED_OFF'
+./main.o:../main.c:93: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:98: undefined reference to `LED_ON'
+../main.c:99: undefined reference to `LED_OFF'
+../main.c:100: undefined reference to `LED_OFF'
+../main.c:101: undefined reference to `LED_OFF'
+../main.c:102: undefined reference to `LED_OFF'
+../main.c:103: undefined reference to `LED_OFF'
+./main.o:../main.c:104: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:108: undefined reference to `LED_ON'
+../main.c:109: undefined reference to `LED_ON'
+../main.c:110: undefined reference to `LED_ON'
+../main.c:111: undefined reference to `LED_ON'
+../main.c:112: undefined reference to `LED_ON'
+./main.o:../main.c:113: more undefined references to `LED_ON' follow
+make: *** [keypad_app.elf] Error 1
+11:23:15 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./main.o   
+./main.o: In function `main':
+../main.c:7: undefined reference to `addLED'
+../main.c:8: undefined reference to `addLED'
+../main.c:9: undefined reference to `addLED'
+../main.c:10: undefined reference to `addLED'
+../main.c:11: undefined reference to `addLED'
+./main.o:../main.c:12: more undefined references to `addLED' follow
+./main.o: In function `main':
+../main.c:15: undefined reference to `HKeyPad_init'
+../main.c:17: undefined reference to `HKeyPad_getKey'
+../main.c:21: undefined reference to `LED_ON'
+../main.c:22: undefined reference to `LED_OFF'
+../main.c:23: undefined reference to `LED_OFF'
+../main.c:24: undefined reference to `LED_OFF'
+../main.c:25: undefined reference to `LED_OFF'
+../main.c:26: undefined reference to `LED_OFF'
+./main.o:../main.c:27: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:32: undefined reference to `LED_ON'
+../main.c:33: undefined reference to `LED_OFF'
+../main.c:34: undefined reference to `LED_OFF'
+../main.c:35: undefined reference to `LED_OFF'
+../main.c:36: undefined reference to `LED_OFF'
+../main.c:37: undefined reference to `LED_OFF'
+./main.o:../main.c:38: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:43: undefined reference to `LED_ON'
+../main.c:44: undefined reference to `LED_OFF'
+../main.c:45: undefined reference to `LED_OFF'
+../main.c:46: undefined reference to `LED_OFF'
+../main.c:47: undefined reference to `LED_OFF'
+../main.c:48: undefined reference to `LED_OFF'
+./main.o:../main.c:49: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:54: undefined reference to `LED_ON'
+../main.c:55: undefined reference to `LED_OFF'
+../main.c:56: undefined reference to `LED_OFF'
+../main.c:57: undefined reference to `LED_OFF'
+../main.c:58: undefined reference to `LED_OFF'
+../main.c:59: undefined reference to `LED_OFF'
+./main.o:../main.c:60: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:65: undefined reference to `LED_ON'
+../main.c:66: undefined reference to `LED_OFF'
+../main.c:67: undefined reference to `LED_OFF'
+../main.c:68: undefined reference to `LED_OFF'
+../main.c:69: undefined reference to `LED_OFF'
+../main.c:70: undefined reference to `LED_OFF'
+./main.o:../main.c:71: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:76: undefined reference to `LED_ON'
+../main.c:77: undefined reference to `LED_OFF'
+../main.c:78: undefined reference to `LED_OFF'
+../main.c:79: undefined reference to `LED_OFF'
+../main.c:80: undefined reference to `LED_OFF'
+../main.c:81: undefined reference to `LED_OFF'
+./main.o:../main.c:82: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:87: undefined reference to `LED_ON'
+../main.c:88: undefined reference to `LED_OFF'
+../main.c:89: undefined reference to `LED_OFF'
+../main.c:90: undefined reference to `LED_OFF'
+../main.c:91: undefined reference to `LED_OFF'
+../main.c:92: undefined reference to `LED_OFF'
+./main.o:../main.c:93: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:98: undefined reference to `LED_ON'
+../main.c:99: undefined reference to `LED_OFF'
+../main.c:100: undefined reference to `LED_OFF'
+../main.c:101: undefined reference to `LED_OFF'
+../main.c:102: undefined reference to `LED_OFF'
+../main.c:103: undefined reference to `LED_OFF'
+./main.o:../main.c:104: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:108: undefined reference to `LED_ON'
+../main.c:109: undefined reference to `LED_ON'
+../main.c:110: undefined reference to `LED_ON'
+../main.c:111: undefined reference to `LED_ON'
+../main.c:112: undefined reference to `LED_ON'
+./main.o:../main.c:113: more undefined references to `LED_ON' follow
+make: *** [keypad_app.elf] Error 1
+11:23:48 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./main.o   
+./main.o: In function `main':
+../main.c:8: undefined reference to `addLED'
+../main.c:9: undefined reference to `addLED'
+../main.c:10: undefined reference to `addLED'
+../main.c:11: undefined reference to `addLED'
+../main.c:12: undefined reference to `addLED'
+./main.o:../main.c:13: more undefined references to `addLED' follow
+./main.o: In function `main':
+../main.c:16: undefined reference to `HKeyPad_init'
+../main.c:18: undefined reference to `HKeyPad_getKey'
+../main.c:22: undefined reference to `LED_ON'
+../main.c:23: undefined reference to `LED_OFF'
+../main.c:24: undefined reference to `LED_OFF'
+../main.c:25: undefined reference to `LED_OFF'
+../main.c:26: undefined reference to `LED_OFF'
+../main.c:27: undefined reference to `LED_OFF'
+./main.o:../main.c:28: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:33: undefined reference to `LED_ON'
+../main.c:34: undefined reference to `LED_OFF'
+../main.c:35: undefined reference to `LED_OFF'
+../main.c:36: undefined reference to `LED_OFF'
+../main.c:37: undefined reference to `LED_OFF'
+../main.c:38: undefined reference to `LED_OFF'
+./main.o:../main.c:39: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:44: undefined reference to `LED_ON'
+../main.c:45: undefined reference to `LED_OFF'
+../main.c:46: undefined reference to `LED_OFF'
+../main.c:47: undefined reference to `LED_OFF'
+../main.c:48: undefined reference to `LED_OFF'
+../main.c:49: undefined reference to `LED_OFF'
+./main.o:../main.c:50: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:55: undefined reference to `LED_ON'
+../main.c:56: undefined reference to `LED_OFF'
+../main.c:57: undefined reference to `LED_OFF'
+../main.c:58: undefined reference to `LED_OFF'
+../main.c:59: undefined reference to `LED_OFF'
+../main.c:60: undefined reference to `LED_OFF'
+./main.o:../main.c:61: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:66: undefined reference to `LED_ON'
+../main.c:67: undefined reference to `LED_OFF'
+../main.c:68: undefined reference to `LED_OFF'
+../main.c:69: undefined reference to `LED_OFF'
+../main.c:70: undefined reference to `LED_OFF'
+../main.c:71: undefined reference to `LED_OFF'
+./main.o:../main.c:72: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:77: undefined reference to `LED_ON'
+../main.c:78: undefined reference to `LED_OFF'
+../main.c:79: undefined reference to `LED_OFF'
+../main.c:80: undefined reference to `LED_OFF'
+../main.c:81: undefined reference to `LED_OFF'
+../main.c:82: undefined reference to `LED_OFF'
+./main.o:../main.c:83: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:88: undefined reference to `LED_ON'
+../main.c:89: undefined reference to `LED_OFF'
+../main.c:90: undefined reference to `LED_OFF'
+../main.c:91: undefined reference to `LED_OFF'
+../main.c:92: undefined reference to `LED_OFF'
+../main.c:93: undefined reference to `LED_OFF'
+./main.o:../main.c:94: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:99: undefined reference to `LED_ON'
+../main.c:100: undefined reference to `LED_OFF'
+../main.c:101: undefined reference to `LED_OFF'
+../main.c:102: undefined reference to `LED_OFF'
+../main.c:103: undefined reference to `LED_OFF'
+../main.c:104: undefined reference to `LED_OFF'
+./main.o:../main.c:105: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:109: undefined reference to `LED_ON'
+../main.c:110: undefined reference to `LED_ON'
+../main.c:111: undefined reference to `LED_ON'
+../main.c:112: undefined reference to `LED_ON'
+../main.c:113: undefined reference to `LED_ON'
+./main.o:../main.c:114: more undefined references to `LED_ON' follow
+make: *** [keypad_app.elf] Error 1
+11:24:51 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./main.o   
+./main.o: In function `main':
+../main.c:8: undefined reference to `addLED'
+../main.c:9: undefined reference to `addLED'
+../main.c:10: undefined reference to `addLED'
+../main.c:11: undefined reference to `addLED'
+../main.c:12: undefined reference to `addLED'
+./main.o:../main.c:13: more undefined references to `addLED' follow
+./main.o: In function `main':
+../main.c:16: undefined reference to `HKeyPad_init'
+../main.c:18: undefined reference to `HKeyPad_getKey'
+../main.c:22: undefined reference to `LED_ON'
+../main.c:23: undefined reference to `LED_OFF'
+../main.c:24: undefined reference to `LED_OFF'
+../main.c:25: undefined reference to `LED_OFF'
+../main.c:26: undefined reference to `LED_OFF'
+../main.c:27: undefined reference to `LED_OFF'
+./main.o:../main.c:28: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:33: undefined reference to `LED_ON'
+../main.c:34: undefined reference to `LED_OFF'
+../main.c:35: undefined reference to `LED_OFF'
+../main.c:36: undefined reference to `LED_OFF'
+../main.c:37: undefined reference to `LED_OFF'
+../main.c:38: undefined reference to `LED_OFF'
+./main.o:../main.c:39: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:44: undefined reference to `LED_ON'
+../main.c:45: undefined reference to `LED_OFF'
+../main.c:46: undefined reference to `LED_OFF'
+../main.c:47: undefined reference to `LED_OFF'
+../main.c:48: undefined reference to `LED_OFF'
+../main.c:49: undefined reference to `LED_OFF'
+./main.o:../main.c:50: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:55: undefined reference to `LED_ON'
+../main.c:56: undefined reference to `LED_OFF'
+../main.c:57: undefined reference to `LED_OFF'
+../main.c:58: undefined reference to `LED_OFF'
+../main.c:59: undefined reference to `LED_OFF'
+../main.c:60: undefined reference to `LED_OFF'
+./main.o:../main.c:61: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:66: undefined reference to `LED_ON'
+../main.c:67: undefined reference to `LED_OFF'
+../main.c:68: undefined reference to `LED_OFF'
+../main.c:69: undefined reference to `LED_OFF'
+../main.c:70: undefined reference to `LED_OFF'
+../main.c:71: undefined reference to `LED_OFF'
+./main.o:../main.c:72: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:77: undefined reference to `LED_ON'
+../main.c:78: undefined reference to `LED_OFF'
+../main.c:79: undefined reference to `LED_OFF'
+../main.c:80: undefined reference to `LED_OFF'
+../main.c:81: undefined reference to `LED_OFF'
+../main.c:82: undefined reference to `LED_OFF'
+./main.o:../main.c:83: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:88: undefined reference to `LED_ON'
+../main.c:89: undefined reference to `LED_OFF'
+../main.c:90: undefined reference to `LED_OFF'
+../main.c:91: undefined reference to `LED_OFF'
+../main.c:92: undefined reference to `LED_OFF'
+../main.c:93: undefined reference to `LED_OFF'
+./main.o:../main.c:94: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:99: undefined reference to `LED_ON'
+../main.c:100: undefined reference to `LED_OFF'
+../main.c:101: undefined reference to `LED_OFF'
+../main.c:102: undefined reference to `LED_OFF'
+../main.c:103: undefined reference to `LED_OFF'
+../main.c:104: undefined reference to `LED_OFF'
+./main.o:../main.c:105: more undefined references to `LED_OFF' follow
+./main.o: In function `main':
+../main.c:109: undefined reference to `LED_ON'
+../main.c:110: undefined reference to `LED_ON'
+../main.c:111: undefined reference to `LED_ON'
+../main.c:112: undefined reference to `LED_ON'
+../main.c:113: undefined reference to `LED_ON'
+./main.o:../main.c:114: more undefined references to `LED_ON' follow
+make: *** [keypad_app.elf] Error 1
+11:34:25 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/MCAL/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/MCAL/MDIO_program.d" -MT"drivers/MCAL/MDIO_program.o" -c -o "drivers/MCAL/MDIO_program.o" "../drivers/MCAL/MDIO_program.c"
+Finished building: ../drivers/MCAL/MDIO_program.c
+ 
+Building file: ../drivers/HAL/HKeyPad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HKeyPad_program.d" -MT"drivers/HAL/HKeyPad_program.o" -c -o "drivers/HAL/HKeyPad_program.o" "../drivers/HAL/HKeyPad_program.c"
+Finished building: ../drivers/HAL/HKeyPad_program.c
+ 
+Building file: ../drivers/HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HLCD_program.d" -MT"drivers/HAL/HLCD_program.o" -c -o "drivers/HAL/HLCD_program.o" "../drivers/HAL/HLCD_program.c"
+In file included from ../drivers/HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../drivers/HAL/HLCD_program.c:129:7: warning: extra tokens at end of #else directive
+Finished building: ../drivers/HAL/HLCD_program.c
+ 
+Building file: ../drivers/HAL/HLED_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HLED_program.d" -MT"drivers/HAL/HLED_program.o" -c -o "drivers/HAL/HLED_program.o" "../drivers/HAL/HLED_program.c"
+../drivers/HAL/HLED_program.c: In function 'addLED':
+../drivers/HAL/HLED_program.c:5: warning: type of 'port' defaults to 'int'
+../drivers/HAL/HLED_program.c:5: warning: type of 'bit' defaults to 'int'
+../drivers/HAL/HLED_program.c: In function 'LED_ON':
+../drivers/HAL/HLED_program.c:8: warning: type of 'port' defaults to 'int'
+../drivers/HAL/HLED_program.c:8: warning: type of 'bit' defaults to 'int'
+../drivers/HAL/HLED_program.c: In function 'LED_OFF':
+../drivers/HAL/HLED_program.c:11: warning: type of 'port' defaults to 'int'
+../drivers/HAL/HLED_program.c:11: warning: type of 'bit' defaults to 'int'
+Finished building: ../drivers/HAL/HLED_program.c
+ 
+Building file: ../drivers/HAL/HSevenSegments_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HSevenSegments_program.d" -MT"drivers/HAL/HSevenSegments_program.o" -c -o "drivers/HAL/HSevenSegments_program.o" "../drivers/HAL/HSevenSegments_program.c"
+../drivers/HAL/HSevenSegments_program.c:2:31: error: libraries/L_UTILS.h: No such file or directory
+make: *** [drivers/HAL/HSevenSegments_program.o] Error 1
+11:35:26 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HSevenSegments_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HSevenSegments_program.d" -MT"drivers/HAL/HSevenSegments_program.o" -c -o "drivers/HAL/HSevenSegments_program.o" "../drivers/HAL/HSevenSegments_program.c"
+Finished building: ../drivers/HAL/HSevenSegments_program.c
+ 
+Building file: ../drivers/App/lcd_app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/App/lcd_app.d" -MT"drivers/App/lcd_app.o" -c -o "drivers/App/lcd_app.o" "../drivers/App/lcd_app.c"
+In file included from ../drivers/App/lcd_app.c:3:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../drivers/App/lcd_app.c: In function 'main':
+../drivers/App/lcd_app.c:10: warning: pointer targets in passing argument 1 of 'HLCD_writeText' differ in signedness
+../drivers/App/lcd_app.c:12: warning: pointer targets in passing argument 1 of 'HLCD_writeText' differ in signedness
+Finished building: ../drivers/App/lcd_app.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:14: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:18: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:22: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:26: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:30: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:34: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:38: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:42: error: too few arguments to function 'MDIO_SetPortValue'
+../main.c:45: error: too few arguments to function 'MDIO_SetPortValue'
+make: *** [main.o] Error 1
+11:36:08 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./drivers/App/lcd_app.o  ./main.o   
+./main.o: In function `main':
+../main.c:5: multiple definition of `main'
+./drivers/App/lcd_app.o:../drivers/App/lcd_app.c:5: first defined here
+./drivers/App/lcd_app.o: In function `main':
+../drivers/App/lcd_app.c:10: undefined reference to `HLCD_writeText'
+../drivers/App/lcd_app.c:12: undefined reference to `HLCD_writeText'
+make: *** [keypad_app.elf] Error 1
+11:36:35 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8718 bytes (26.6% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8718 bytes):
+
+Writing | ################################################## | 100% 4.98s
+
+avrdude: 8718 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8718 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.42s
+
+avrdude: verifying ...
+avrdude: 8718 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:38:14 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8718 bytes (26.6% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8718 bytes):
+
+Writing | ################################################## | 100% 4.81s
+
+avrdude: 8718 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8718 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.42s
+
+avrdude: verifying ...
+avrdude: 8718 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:39:01 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/MCAL/MDIO_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/MCAL/MDIO_program.d" -MT"drivers/MCAL/MDIO_program.o" -c -o "drivers/MCAL/MDIO_program.o" "../drivers/MCAL/MDIO_program.c"
+Finished building: ../drivers/MCAL/MDIO_program.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8718 bytes (26.6% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8718 bytes):
+
+Writing | ################################################## | 100% 4.81s
+
+avrdude: 8718 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8718 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.41s
+
+avrdude: verifying ...
+avrdude: 8718 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:45:19 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HKeyPad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HKeyPad_program.d" -MT"drivers/HAL/HKeyPad_program.o" -c -o "drivers/HAL/HKeyPad_program.o" "../drivers/HAL/HKeyPad_program.c"
+Finished building: ../drivers/HAL/HKeyPad_program.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8726 bytes (26.6% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8726 bytes):
+
+Writing | ################################################## | 100% 4.84s
+
+avrdude: 8726 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8726 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.42s
+
+avrdude: verifying ...
+avrdude: 8726 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:49:41 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HKeyPad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HKeyPad_program.d" -MT"drivers/HAL/HKeyPad_program.o" -c -o "drivers/HAL/HKeyPad_program.o" "../drivers/HAL/HKeyPad_program.c"
+Finished building: ../drivers/HAL/HKeyPad_program.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8768 bytes (26.8% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8768 bytes):
+
+Writing | ################################################## | 100% 4.80s
+
+avrdude: 8768 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8768 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.44s
+
+avrdude: verifying ...
+avrdude: 8768 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:31:46 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HKeyPad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HKeyPad_program.d" -MT"drivers/HAL/HKeyPad_program.o" -c -o "drivers/HAL/HKeyPad_program.o" "../drivers/HAL/HKeyPad_program.c"
+Finished building: ../drivers/HAL/HKeyPad_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8858 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8858 bytes):
+
+Writing | ################################################## | 100% 4.89s
+
+avrdude: 8858 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8858 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.48s
+
+avrdude: verifying ...
+avrdude: 8858 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:38:02 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HLCD_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HLCD_program.d" -MT"drivers/HAL/HLCD_program.o" -c -o "drivers/HAL/HLCD_program.o" "../drivers/HAL/HLCD_program.c"
+In file included from ../drivers/HAL/HLCD_program.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../drivers/HAL/HLCD_program.c:129:7: warning: extra tokens at end of #else directive
+Finished building: ../drivers/HAL/HLCD_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8858 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8858 bytes):
+
+Writing | ################################################## | 100% 4.94s
+
+avrdude: 8858 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8858 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.50s
+
+avrdude: verifying ...
+avrdude: 8858 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:41:50 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8858 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8858 bytes):
+
+Writing | ################################################## | 100% 4.89s
+
+avrdude: 8858 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8858 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.48s
+
+avrdude: verifying ...
+avrdude: 8858 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:42:51 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8858 bytes (27.0% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (8858 bytes):
+
+Writing | ################################################## | 100% 4.86s
+
+avrdude: 8858 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 8858 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.49s
+
+avrdude: verifying ...
+avrdude: 8858 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:46:17 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9182 bytes (28.0% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9182 bytes):
+
+Writing | ################################################## | 100% 5.12s
+
+avrdude: 9182 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9182 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.64s
+
+avrdude: verifying ...
+avrdude: 9182 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:47:08 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'app2':
+../main.c:99: warning: implicit declaration of function '_delay_ms'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+./main.o: In function `app1':
+../main.c:46: undefined reference to `_delay_ms'
+make: *** [keypad_app.elf] Error 1
+13:47:35 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.17s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.76s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:48:33 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.27s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.78s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:49:12 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.32s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.77s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:50:27 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.23s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.76s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:51:11 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.23s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.76s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+13:52:25 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9418 bytes (28.7% Full)
+(.text + .data + .bootloader)
+
+Data:        200 bytes (9.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9418 bytes):
+
+Writing | ################################################## | 100% 5.21s
+
+avrdude: 9418 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9418 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.77s
+
+avrdude: verifying ...
+avrdude: 9418 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:33:51 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../drivers/HAL/HKeyPad_program.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"drivers/HAL/HKeyPad_program.d" -MT"drivers/HAL/HKeyPad_program.o" -c -o "drivers/HAL/HKeyPad_program.o" "../drivers/HAL/HKeyPad_program.c"
+Finished building: ../drivers/HAL/HKeyPad_program.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:90: error: expected ';' before 'res'
+../main.c:57: warning: unused variable 'cursorCount'
+make: *** [main.o] Error 1
+14:34:03 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:90: error: expected ';' before 'res'
+../main.c:57: warning: unused variable 'cursorCount'
+make: *** [main.o] Error 1
+14:34:17 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9466 bytes (28.9% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (9466 bytes):
+
+Writing | ################################################## | 100% 5.75s
+
+avrdude: 9466 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 9466 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.79s
+
+avrdude: verifying ...
+avrdude: 9466 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:35:44 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10322 bytes (31.5% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (10322 bytes):
+
+Writing | ################################################## | 100% 6.21s
+
+avrdude: 10322 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 10322 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.22s
+
+avrdude: verifying ...
+avrdude: 10322 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:37:33 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10354 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (10354 bytes):
+
+Writing | ################################################## | 100% 6.26s
+
+avrdude: 10354 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 10354 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.24s
+
+avrdude: verifying ...
+avrdude: 10354 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:40:57 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10354 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (10354 bytes):
+
+Writing | ################################################## | 100% 6.00s
+
+avrdude: 10354 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 10354 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.24s
+
+avrdude: verifying ...
+avrdude: 10354 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:41:52 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10350 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (10350 bytes):
+
+Writing | ################################################## | 100% 6.08s
+
+avrdude: 10350 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 10350 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.24s
+
+avrdude: verifying ...
+avrdude: 10350 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:42:06 **** Incremental Build of configuration Debug for project keypad_app ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:5:
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'app2':
+../main.c:72: warning: implicit declaration of function 'writeText'
+../main.c:57: warning: unused variable 'cursorCount'
+Finished building: ../main.c
+ 
+Building target: keypad_app.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,keypad_app.map -mmcu=atmega32 -o "keypad_app.elf"  ./drivers/MCAL/MDIO_program.o  ./drivers/HAL/HKeyPad_program.o ./drivers/HAL/HLCD_program.o ./drivers/HAL/HLED_program.o ./drivers/HAL/HSevenSegments_program.o  ./main.o   
+Finished building target: keypad_app.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S keypad_app.elf  >"keypad_app.lss"
+Finished building: keypad_app.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex keypad_app.elf  "keypad_app.hex"
+Finished building: keypad_app.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 keypad_app.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10342 bytes (31.6% Full)
+(.text + .data + .bootloader)
+
+Data:        252 bytes (12.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdude -pm32 -cusbasp -u -Uflash:w:keypad_app.hex:a -Ulfuse:w:0xff:m -Uhfuse:w:0xd9:m
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "keypad_app.hex"
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: writing flash (10342 bytes):
+
+Writing | ################################################## | 100% 6.05s
+
+avrdude: 10342 bytes of flash written
+avrdude: verifying flash memory against keypad_app.hex:
+avrdude: load data flash data from input file keypad_app.hex:
+avrdude: input file keypad_app.hex auto detected as Intel Hex
+avrdude: input file keypad_app.hex contains 10342 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.24s
+
+avrdude: verifying ...
+avrdude: 10342 bytes of flash verified
+avrdude: reading input file "0xff"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xff:
+avrdude: load data lfuse data from input file 0xff:
+avrdude: input file 0xff contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+avrdude: reading input file "0xd9"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.00s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xd9:
+avrdude: load data hfuse data from input file 0xd9:
+avrdude: input file 0xd9 contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
