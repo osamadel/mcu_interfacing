@@ -2,18 +2,20 @@ Archive member included because of file (symbol)
 
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./HAL/HKeyPad_program.o (__do_copy_data)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
-                              ./main.o (__fixunssfsi)
+                              ./HAL/HLCD_program.o (__fixunssfsi)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__subsf3)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
-                              ./main.o (__mulsf3)
+                              ./HAL/HLCD_program.o (__mulsf3)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
-                              ./main.o (__gtsf2)
+                              ./HAL/HLCD_program.o (__gtsf2)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__gesf2)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
-                              ./main.o (__ltsf2)
+                              ./HAL/HLCD_program.o (__ltsf2)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__fixsfsi)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
@@ -22,8 +24,6 @@ e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__prologue_saves__)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__epilogue_restores__)
-e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                              e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o) (__do_copy_data)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
                               e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o) (__pack_f)
 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
@@ -45,7 +45,12 @@ signature        0x00840000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
-LOAD ./MDIO_program.o
+LOAD ./MCAL/MDIO_program.o
+LOAD ./HAL/HKeyPad_program.o
+LOAD ./HAL/HLCD_program.o
+LOAD ./HAL/HLED_program.o
+LOAD ./HAL/HNPN_program.o
+LOAD ./HAL/HSevenSegments_program.o
 LOAD ./main.o
 LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
@@ -141,7 +146,7 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x13ba
+.text           0x00000000     0x25f6
  *(.vectors)
  .vectors       0x00000000       0x54 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -216,9 +221,15 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
                 0x0000007e                __vector_16
                 0x0000007e                __vector_18
                 0x0000007e                __vector_20
- .text          0x00000082        0x0 ./MDIO_program.o
+ .text          0x00000082        0x0 ./MCAL/MDIO_program.o
+ .text          0x00000082        0x0 ./HAL/HKeyPad_program.o
+ .text          0x00000082        0x0 ./HAL/HLCD_program.o
+ .text          0x00000082        0x0 ./HAL/HLED_program.o
+ .text          0x00000082        0x0 ./HAL/HNPN_program.o
+ .text          0x00000082        0x0 ./HAL/HSevenSegments_program.o
  .text          0x00000082        0x0 ./main.o
  .text          0x00000082        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000082        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .text          0x00000082       0x58 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
                 0x00000082                __fixunssfsi
  .text          0x000000da      0x354 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
@@ -237,7 +248,6 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
  .text          0x000007ea        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
  .text          0x000007ea        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
  .text          0x000007ea        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .text          0x000007ea        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .text          0x000007ea      0x1aa e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
                 0x000007ea                __pack_f
  .text          0x00000994       0xf0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
@@ -247,27 +257,91 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
                 0x00000b36                . = ALIGN (0x2)
  *(.text.*)
  .text.MDIO_SetPinDirection
-                0x00000b36      0x398 ./MDIO_program.o
+                0x00000b36      0x398 ./MCAL/MDIO_program.o
                 0x00000b36                MDIO_SetPinDirection
+ .text.MDIO_SetPortDirection
+                0x00000ece       0x84 ./MCAL/MDIO_program.o
+                0x00000ece                MDIO_SetPortDirection
  .text.MDIO_SetPinOutput
-                0x00000ece      0x1c8 ./MDIO_program.o
-                0x00000ece                MDIO_SetPinOutput
+                0x00000f52      0x1c8 ./MCAL/MDIO_program.o
+                0x00000f52                MDIO_SetPinOutput
+ .text.MDIO_SetPortValue
+                0x0000111a       0x84 ./MCAL/MDIO_program.o
+                0x0000111a                MDIO_SetPortValue
  .text.MDIO_GetPinValue
-                0x00001096       0x8e ./MDIO_program.o
-                0x00001096                MDIO_GetPinValue
- .text.main     0x00001124      0x224 ./main.o
-                0x00001124                main
- .text.libgcc   0x00001348        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00001348       0x38 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00001348                __prologue_saves__
- .text.libgcc   0x00001380       0x36 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00001380                __epilogue_restores__
- .text.libgcc   0x000013b6        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                0x000013b6                . = ALIGN (0x2)
+                0x0000119e       0xf8 ./MCAL/MDIO_program.o
+                0x0000119e                MDIO_GetPinValue
+ .text.MDIO_GetPortValue
+                0x00001296       0x8a ./MCAL/MDIO_program.o
+                0x00001296                MDIO_GetPortValue
+ .text.HKeyPad_init
+                0x00001320       0x1e ./HAL/HKeyPad_program.o
+                0x00001320                HKeyPad_init
+ .text.HKeyPad_getKey
+                0x0000133e       0xb0 ./HAL/HKeyPad_program.o
+                0x0000133e                HKeyPad_getKey
+ .text.HLCD_init_character
+                0x000013ee       0x98 ./HAL/HLCD_program.o
+                0x000013ee                HLCD_init_character
+ .text.HLCD_writeText
+                0x00001486       0x52 ./HAL/HLCD_program.o
+                0x00001486                HLCD_writeText
+ .text.HLCD_clear
+                0x000014d8       0x2a ./HAL/HLCD_program.o
+                0x000014d8                HLCD_clear
+ .text.HLCD_setLine
+                0x00001502       0x1c ./HAL/HLCD_program.o
+                0x00001502                HLCD_setLine
+ .text.HLCD_setCursor
+                0x0000151e       0x5e ./HAL/HLCD_program.o
+                0x0000151e                HLCD_setCursor
+ .text.HLCD_shiftDisplay
+                0x0000157c       0x5e ./HAL/HLCD_program.o
+                0x0000157c                HLCD_shiftDisplay
+ .text.HLCD_shiftCursor
+                0x000015da       0xb6 ./HAL/HLCD_program.o
+                0x000015da                HLCD_shiftCursor
+ .text.HLCD_init
+                0x00001690      0x888 ./HAL/HLCD_program.o
+                0x00001690                HLCD_init
+ .text.HLCD_writeCMD
+                0x00001f18      0x13c ./HAL/HLCD_program.o
+                0x00001f18                HLCD_writeCMD
+ .text.HLCD_writeData
+                0x00002054      0x362 ./HAL/HLCD_program.o
+                0x00002054                HLCD_writeData
+ .text.addLED   0x000023b6       0x2e ./HAL/HLED_program.o
+                0x000023b6                addLED
+ .text.LED_ON   0x000023e4       0x2e ./HAL/HLED_program.o
+                0x000023e4                LED_ON
+ .text.LED_OFF  0x00002412       0x2e ./HAL/HLED_program.o
+                0x00002412                LED_OFF
+ .text.NPN_ON   0x00002440       0x2c ./HAL/HNPN_program.o
+                0x00002440                NPN_ON
+ .text.NPN_OFF  0x0000246c       0x2c ./HAL/HNPN_program.o
+                0x0000246c                NPN_OFF
+ .text.H7Seg_clear
+                0x00002498       0x16 ./HAL/HSevenSegments_program.o
+                0x00002498                H7Seg_clear
+ .text.H7Seg_initialize
+                0x000024ae       0x16 ./HAL/HSevenSegments_program.o
+                0x000024ae                H7Seg_initialize
+ .text.H7Seg_display
+                0x000024c4       0x2a ./HAL/HSevenSegments_program.o
+                0x000024c4                H7Seg_display
+ .text.main     0x000024ee       0x96 ./main.o
+                0x000024ee                main
+ .text.libgcc   0x00002584        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002584        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002584       0x38 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002584                __prologue_saves__
+ .text.libgcc   0x000025bc       0x36 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x000025bc                __epilogue_restores__
+                0x000025f2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000013b6        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000013b6                exit
-                0x000013b6                _exit
+ .fini9         0x000025f2        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000025f2                exit
+                0x000025f2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -286,17 +360,23 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000013b6        0x4 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000025f2        0x4 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000013ba                _etext = .
+                0x000025f6                _etext = .
 
-.data           0x00800060        0x8 load address 0x000013ba
+.data           0x00800060       0x2c load address 0x000025f6
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .data          0x00800060        0x0 ./MDIO_program.o
+ .data          0x00800060        0x0 ./MCAL/MDIO_program.o
+ .data          0x00800060        0x0 ./HAL/HKeyPad_program.o
+ .data          0x00800060        0x0 ./HAL/HLCD_program.o
+ .data          0x00800060        0x0 ./HAL/HLED_program.o
+ .data          0x00800060        0x0 ./HAL/HNPN_program.o
+ .data          0x00800060        0x0 ./HAL/HSevenSegments_program.o
  .data          0x00800060        0x0 ./main.o
  .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
  .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
  .data          0x00800060        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
@@ -308,51 +388,64 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
                 0x00800060                __thenan_sf
  .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
  .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
  .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
  .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
  .data          0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
+ .data.KPD_arr  0x00800068       0x10 ./HAL/HKeyPad_program.o
+                0x00800068                KPD_arr
+ .data.mode     0x00800078        0x1 ./HAL/HLCD_program.o
+                0x00800078                mode
+ .data.numbers  0x00800079        0xa ./HAL/HSevenSegments_program.o
+                0x00800079                numbers
  *(.rodata)
  *(.rodata*)
+ .rodata.C.0.1310
+                0x00800083        0x8 ./HAL/HLCD_program.o
  *(.gnu.linkonce.d*)
-                0x00800068                . = ALIGN (0x2)
-                0x00800068                _edata = .
-                0x00800068                PROVIDE (__data_end, .)
+                0x0080008c                . = ALIGN (0x2)
+ *fill*         0x0080008b        0x1 00
+                0x0080008c                _edata = .
+                0x0080008c                PROVIDE (__data_end, .)
 
-.bss            0x00800068        0x0
-                0x00800068                PROVIDE (__bss_start, .)
+.bss            0x0080008c        0x0
+                0x0080008c                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x00800068        0x0 ./MDIO_program.o
- .bss           0x00800068        0x0 ./main.o
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x00800068        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080008c        0x0 ./MCAL/MDIO_program.o
+ .bss           0x0080008c        0x0 ./HAL/HKeyPad_program.o
+ .bss           0x0080008c        0x0 ./HAL/HLCD_program.o
+ .bss           0x0080008c        0x0 ./HAL/HLED_program.o
+ .bss           0x0080008c        0x0 ./HAL/HNPN_program.o
+ .bss           0x0080008c        0x0 ./HAL/HSevenSegments_program.o
+ .bss           0x0080008c        0x0 ./main.o
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x0080008c        0x0 e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
  *(COMMON)
-                0x00800068                PROVIDE (__bss_end, .)
-                0x000013ba                __data_load_start = LOADADDR (.data)
-                0x000013c2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080008c                PROVIDE (__bss_end, .)
+                0x000025f6                __data_load_start = LOADADDR (.data)
+                0x00002622                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800068        0x0
-                0x00800068                PROVIDE (__noinit_start, .)
+.noinit         0x0080008c        0x0
+                0x0080008c                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800068                PROVIDE (__noinit_end, .)
-                0x00800068                _end = .
-                0x00800068                PROVIDE (__heap_start, .)
+                0x0080008c                PROVIDE (__noinit_end, .)
+                0x0080008c                _end = .
+                0x0080008c                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -370,15 +463,25 @@ LOAD e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/bin/.
 .signature
  *(.signature*)
 
-.stab           0x00000000      0x888
+.stab           0x00000000     0x2208
  *(.stab)
- .stab          0x00000000      0x3fc ./MDIO_program.o
- .stab          0x000003fc      0x48c ./main.o
-                                0x528 (size before relaxing)
+ .stab          0x00000000      0x5c4 ./MCAL/MDIO_program.o
+ .stab          0x000005c4      0x2e8 ./HAL/HKeyPad_program.o
+                                0x2f4 (size before relaxing)
+ .stab          0x000008ac     0x11c4 ./HAL/HLCD_program.o
+                               0x1260 (size before relaxing)
+ .stab          0x00001a70      0x1bc ./HAL/HLED_program.o
+                                0x258 (size before relaxing)
+ .stab          0x00001c2c      0x18c ./HAL/HNPN_program.o
+                                0x228 (size before relaxing)
+ .stab          0x00001db8      0x1b0 ./HAL/HSevenSegments_program.o
+                                0x24c (size before relaxing)
+ .stab          0x00001f68      0x2a0 ./main.o
+                                0x438 (size before relaxing)
 
-.stabstr        0x00000000      0x887
+.stabstr        0x00000000      0xd38
  *(.stabstr)
- .stabstr       0x00000000      0x887 ./MDIO_program.o
+ .stabstr       0x00000000      0xd38 ./MCAL/MDIO_program.o
 
 .stab.excl
  *(.stab.excl)

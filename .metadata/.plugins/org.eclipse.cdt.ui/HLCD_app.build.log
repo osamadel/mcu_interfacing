@@ -1,36 +1,15 @@
-07:40:43 **** Incremental Build of configuration Debug for project HLCD_app ****
+17:44:47 **** Incremental Build of configuration Debug for project HLCD_app ****
 make all 
-Building file: ../HAL/HLCD_program.c
-Invoking: AVR Compiler
-avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/HLCD_program.d" -MT"HAL/HLCD_program.o" -c -o "HAL/HLCD_program.o" "../HAL/HLCD_program.c"
-In file included from ../HAL/HLCD_program.c:5:
-e:/iti 3 months/04- microcontroller interfacing/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
-../HAL/HLCD_program.c:127:7: warning: extra tokens at end of #else directive
-Finished building: ../HAL/HLCD_program.c
- 
-Building target: HLCD_app.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,HLCD_app.map -mmcu=atmega32 -o "HLCD_app.elf"  ./MCAL/MDIO_program.o  ./HAL/HLCD_program.o ./HAL/HLED_program.o ./HAL/HSevenSegments_program.o  ./main.o   
-Finished building target: HLCD_app.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S HLCD_app.elf  >"HLCD_app.lss"
-Finished building: HLCD_app.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HLCD_app.elf  "HLCD_app.hex"
-Finished building: HLCD_app.hex
- 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega32 HLCD_app.elf
 AVR Memory Usage
 ----------------
 Device: atmega32
 
-Program:    8940 bytes (27.3% Full)
+Program:   10096 bytes (30.8% Full)
 (.text + .data + .bootloader)
 
-Data:         34 bytes (1.7% Full)
+Data:         48 bytes (2.3% Full)
 (.data + .bss + .noinit)
 
 
@@ -41,5 +20,5 @@ E:\ITI 3 Months\04- Microcontroller Interfacing\IMT_SDK_Win_64\WinAVR\bin\avrdud
 avrdude: error: could not find USB device "USBasp" with vid=0x16c0 pid=0x5dc
 make: *** [avrdudedummy] Error 1
 
-07:40:45 Build Finished (took 2s.110ms)
+17:44:47 Build Finished (took 283ms)
 

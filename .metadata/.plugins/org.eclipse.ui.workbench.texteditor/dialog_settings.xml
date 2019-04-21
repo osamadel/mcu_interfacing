@@ -2,17 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="PORTD" key="selection"/>
+		<item value="PORTB" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PORTA"/>
 			<item value="PORTC"/>
 			<item value="numbers"/>
 			<item value="&apos;\0&apos;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="PORTB"/>
 			<item value="PORTD"/>
 			<item value="-1"/>
 		</list>

@@ -4,15 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../MDIO_program.c \
 ../main.c 
 
 OBJS += \
-./MDIO_program.o \
 ./main.o 
 
 C_DEPS += \
-./MDIO_program.d \
 ./main.d 
 
 

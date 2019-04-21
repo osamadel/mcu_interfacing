@@ -1,5 +1,8 @@
-main.o main.o: ../main.c ../L_STD_TYPES.h ../MDIO_interface.h
+main.o main.o: ../main.c ../libraries/L_STD_TYPES.h \
+  ../MCAL/MDIO_interface.h ../HAL/HSevenSegments_interface.h
 
-../L_STD_TYPES.h:
+../libraries/L_STD_TYPES.h:
 
-../MDIO_interface.h:
+../MCAL/MDIO_interface.h:
+
+../HAL/HSevenSegments_interface.h:
